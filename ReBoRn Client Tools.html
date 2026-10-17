@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ReBoRn Client Tools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12284a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ReBoRn Client Tools">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAhz0lEQVR42u2deZwV1bXv1x6q6lSdsU+P0MzNDIKIiIhocIyzeQYT9fp8MYm5msQhV68v11yTmMTEJA5J9OYm8UWjMXFGY5444yzI2DIPjc3QDU1PZ65Tw97r/lFN2zQgoA2nz+n6fQ7/NE01XfWtNe211ybx8eeCL1/7E/VvgS8fDl8+HL58OHz5cPjy4fDlw+HLh8OXD4cvHw5fPhy+fPlw+PLh8OXD4cuHw5cPhy8fDl8+HL58OHz5cPjy4fDly4fDlw+Hr88uPsB/fwIABAgAIdj9RQSCCICAPhwDjwMAQASCEoQEVxJXECEBAQgAAnAKnCGjyCkQCgQQgCDAQCOGD1gOGAVNwXBAxkNudcQdFHNHVduUQEOLsjOhtCRZR4al8yxvESGBALCBRwwfKBxwDOtdHAwuc2vjzpC4UxNzK8MiFhSGigr75Pk6guRsksyx1jTbleBNHcqODt7ceYjElI5XIkW0V/YwORDVEXdwmVMbd/fDAQEpiSPAFcSVRKL3pCUACEkRgBJgFBWGnAGjCHgIxDilRkw/hePw/EJQVEc/nQNwBNmbA+RUcoacIgEQSCyXpkwFASIBJ6BIRhCh68e5kgpJjgAx/d0rFR6Ow4wPuuzBkLhb282BIQztU+xBbw7yDs1YSkdO3Z3Wdib15oS+MxloSQfaMhoCVATt6kh+UNQcHDUHRfNV4Xw8aIe1gUhMYeAgBCg5En7hABxk1d2Zbg70lrTWntVSpmI6zJEEkFCCjCGnkgC4krqSSEkAkDPUFREJOOUFJUYiQRwYcBACtktyNuG9OThAnPjZOQi0pAMH4oBTpAQJAc9eeWEBQFeI0P11icSVRBSOGFeCoaLK8ejzcbThIAQshwwtdy49MVUVcffnFw4eH+zHL6QCLanD4+DQ7zUhBSImxXYleGuaP/1h5OPdiqYcbT4KYDmEhP93zc5TJ2TTeSoksV0iDj8+OEIcHBblR5oYlSOjGNLk4gbjqt8PLvE6ByHgCogasjbutqS46xJNkUHV/cx+wVDdfTmQSI5CLIfY5YZ6/iyFocrcXsR05NTWTGD1zujBiTHs8Ce5EuYdls2zrMUGxdx4UOxOceXoOpcCFMEQwRXACDKOOzqNJVvju9OB5sSnxYmF5eDoEzM4alaF89OHdQ4vzyISVxBZiF+zMBVSQkAiCanuWxurfv7yxJhhI0JxcXBEiSGAiZx242kbbpi7MWUp3vcMrPI5Aihcxgw7ZtiuICXAQV8RwxkCEJXLwt4GXvB7JKQXkBIY8OomRkgQsjC1jZ7ym318+XD48uHw5cPhy4fDlw+HLx8OXz4cvnw4fJW8SmprAqMHYR0B0ftz0JeGUnIIlwJARB+OYlAqk5PYvTWplwghQAnhnKkKZ4wiojzw2kU6Y0qUB7kUY4rCOGcAIIT04einQgTGyOmzpwQ03rVzbZ833XZFOmO2dqR2tSY6EhlV4aFg4EAPde6sSYauIsK+K6KI4LgikzXbOzMt7cnORAYIiYT00jMjpQAHISAlKpz/8c5vxiLBT/9mM29v39n+/rINj7/w/qKVm6Jho9cTRQRKye9+fPWgytinX8qynV2tiRVrGp97ZcmCt1YwRlXOZQnxUVJuJZOzIiEdEcme973ngyJACCF6QB07ctDYkYOuuuTU+x568c4H5hu6tu8bn81ZUkopsTv2kN6WAdJ1KUqJpirDayuH11ZefNaM195ddd3tD2ZyeYXzkrEfJZWtUEro3mJ7PpQQ7BJIia6QiHDT1eddd+XZyVSWMXrQS3FGOWecMc6YF7J4EkK6rjjj5GP++6ffdF3hp7LF6HoIY10pCKWEMwoAUuJNV583uDpu2y45WLtVS1uiccfubc1tjTtaOxIZSikhxLss58x1xWknTZ47a3I6ax40afLdSuFDVELgOz/88+oN23Rd44yOHFp13b+cNb6u1vM7lBIpMRYxZkyt+8drS2ORoBD7dwcSkRJy/Y8fXvjB6kjIEFIqnJ1/2vQ7b7lMU7mXvAAhiHjqzIkL3lxBSqVvqcTnc6xvaPrwo4ZwMCAlvvbeqrcXr3vjb7eXRUMeHxKRIBleWymEPOgDFUK4rnBdIaQUQvzuLwumTx55xcVzXCE5owSAEDK4uoxSWjIRaYm7FV1TQ4YWNLSgoQ2piTc2tS5bvcXLbrozHVU5pDeEUcpY1yegKuGgvqlx197JMpRY62uJWw6JKGXXR0iklOQtp0f+AgDQnsiQnkOfDpi4umbeVjiXEnNoZU1rxpS67ot4tZWGbS1CSuLDUSxxKCWEEgIUTNNmlI4bNRi6wgQghCDiR+saNfXgWw1ra+JjRw4OBQNSoh5Q55174rlzpyGil7kwSoSUz7+6xAioJVPqKHE4LMvJ5W3KKCEkFAzc9PXzxo4c5FUvbMdVFf76+6tXrtvqBSUHdL2EAMBvf/g1RAQCiKBw1gtBALj97idWrd8WiwZLppTOS9dmAADcd/tV6WyeUaoobHhtZVk06BVAAUBVeOOO1pvvfFTl7FBihZ61EG9dpqvaAdCRyNzw44effPGDYYPKnRIqdZS45Zg0duheIYiUlFJEbE9kFr6/+mf/Nb+5pcPQA1LKwySPAMGu+iliKBi48epzJcqX3qqPhQ0hS8RylHi24rjCtl3bcR3HlYiUUokoERd+sOaGOx7e2tQWDupCHNK77grhOMJxheMIKZFRSinxUuKAqsyYUve3+64/9wvTkpmcXwQrDvUKDrwAAgHmnXvi9MmjLr/xN1u27TZ07dMtR1cR7EcPvb98Y9gICIkKp8OHVH33qi/OmFLn8eFVO+6+7coP6zeZecfzOD4c/VRehfTBJ97Y2tQaDgamThhx9ilT93ydCCFHDat6+FffPvuqnwkhKD343sPm3Z2bG3dGQkHPa6xY2/jmojWvP3b7mBE1UiJnVAhZUxk7a87Ux557pywWOlC91Xcr/UWPPPvWnQ/M//nvn7vk2ruv+Y8/ukJ4a2+MUccV4+sG3/zNC5LpQ3IEqsJ1TdU1xfvUVMQ6k5mX3673TItX6kDEaZNGSiyRjb8lDkcsEqyMh8tj4erK6CPPvHX/Iy9TSiRKAOCMSolf/8pp4+tqc3n7oAtviCh7fISUjNG8ZfcsqRFCYhHjUEpqPhyFlxDSFdIVwnVlZXnk/r+8tKs1Qb1VFUIQ0Qio37rsjJxpsYP0jIK3VueV1LxKq+vKmceO7k6bPSDMvLOn68OHo2hCEFQ4392e/NPjrxNCUCIAeOnGVy+YPXbUYPNgxsOynGzOyuWtXN7KW07Q0H5281fnzJggEXt6pc1bd5bMEssAOjVBSBkO6X997p1vXX5mZTzsZRlCyKChXfPV0//tzkcrA6q7vyjSq5D+/N8vv/VfL2KMIaKq8BFDK+PRUPffIiIBEEK+/t5qPaBKiT4cRWY8NIU37+7885Nv/N9rLxZCMkY843HZhSf/999e3dmS0DR+oCxj4pgh+9LG6Cdd7IzR+//y0uqN28tKpYJeUm5lT4TxyadXgiokRoL6I8++3d6ZRgDHFVKi7Yigrn3ty3NTPepX+17KcVy7x6e7I9BrBmOMPvjE6z+5/5lISPfXVvqjyqJBvnc3KOe0Jx+IqKl8+872Pz/15i3XXOB90Vs0+e5VX3z8hfcatrVoqgIAMe9SPUtobP8v0q7WxAcrNj46/52FH6wOB3VCoGT6z0sBDq+u5bryB3c/EdQ17MpEgBDY1tym7T0ZWkgZCekPPb2wM5kB4o3kB4nIKdU0xQslEfGO3zzdq5G9l4eybKczmW1q6dza1NrSmqCMxsJBKUtpZ0KpWA5CQEj58NNvSrnXNrVwUFcUtrfxAM5pKm3e/8jL8EkGShAwqGvanhnSf53/tpAH2vEGe+2fU3ksGgSEkllvK1m3QvaJGfd9lb3tcRVloX0CTOy2MbF9LtX7IntMCGJp7oUsNTgO/SEhgvup31yqz9svgvnyLUf/jH4OarR8OAamhDzo+h3Q4lmV8+HoS8UM23bZfgc3dMsRRTPL24ejj2I3gqbDTh3aecPcjTmbI+yHDykhqLm/eGXiWxurQprT/xHx4egbSSQBRS5YMzhmOLeetS5nM68U18vpRHUnGnCkZ1rQtxwDRogQ0pxHFo3IWvy2c9bkHSqR9jwcREjiuFRhRbNi66eyfWw/yoP2MyuG/PCfxyhMEkBCYK8PRZVLKJKYw4ejj/NYgURhsq4ic6Dnr/Gi2fXkw9GXZBCC6Ty/fu6ma05usFy635xF49KHY+DBQTBpqteduvlrs7a0Z9WeZPQ8UlplPhwDTIxiwlS/NWfzNSdvTpgq6zHBRSLRFcEZSiQAROOyWMqkPhx9Q0ZnTv36SVuuPWVz0lR7ZrBCkpDmrNsV6ciquuIKSTRFFMtcKB+OviHjypmN18/dmM4rhHySiriSRALOul3Rbz8+/fvPT81YSkARjCCB4ugW8+H4vGR0ZNXLjt/6b2esT+c57EPG+pbIjU9NE5KsbY5c/+RxiZxSZth+nWOg2IxLp2+/5cz1WYtDjyVZIUk44Da0hr/39LSkqahchgLu2p3RG548rj2naUUy59ivkH7WG0exI6deOKXp+2evNZ29FtuEJCHN3dZh3Pj0tPasZqiuN6wwptv1TbEt7SGNi6JYe/Mtx2cn49xJzT88b/W+ZAQ1tymh3/DkcbtTgW4yAEAg0RWRd5j0K6SlTcZZE3b96PzVlsvk3mQYqtuSCtz09LTmpB7U3F4DTiUSVjz9HD4ch01GZ06ZO3b3HRes8g5apz3I0FXRkdNuenpaY3swvA8ZnoqoE8yH47DJmF3XdudF9YjgStrd1iUk0RWRMpUbn5rW0BqKBFz3c88jVblEAELQo/DoD3Y4unCgt8GECOltJgKFFU250CPjxJHtd32pnpC9yJBIAorIWPx7z0zb0BLpEzIA0FuiIwQcQRxBjn4LCD26bAAhYLskbxNGABHCAffolAu9FfPPQ0bSVKYP67zrS/WcoiP2IkNlMu+wW549dlVTNBpw+oIMIATCARcRKIG8Q7xjHbCULQcAJWC5JJWnjKKQpCJkKezIzisgAJSgI4jlUPhM/b2cYjKvTB6c/PUlKwOKsPcmQ2HSleSWZ49dvr0spvcNGRJBYbIiZAlJGMWUSS2X0KOe4hQADtslrSnGKTqSVIQsXTmCST8lKBHSllIetEdUZBEha3N2OOcaeGRMqEndM2+Fobp5h/UiQyK5df7UJVvjfUUG7FmrqwhZjiScYmuK2YWA4+gXwVBIaO7klIIraFS3Q5rbkVMV1vejGRnFvMM4xVvPWnfG+BaFiaaEcf+bY97ZXFlm2AgHnyDIKKbyfExl+u5LVkQCjmmzbrAkEk4lANz2/JT3GirLDLuvyCAEXEGihhPVbVdQqsnmTi4kwP5PNiypbIUQAg0tKiJIJJGAWxm2XEH73J9yiuk8LzPse+ctv3zGVl1xKYGxVel7vrziypmNqbwi5UFcDKOYsfjw8ty981aUB61eZDCKnOF//uOYhRur+pAMACCArqCVYSsScL1GkIYWrzvkaJuOow0HInCKjW1q3iEIYChiXFW6KxTvU5vRmVOn1Cb/eMWS44d1tGdVgQQAsjZ3BP33s9b96PzVhIDpMH4AF8MoZi1eGzN/M295VTif6+GMEIERVJm8/YVjXl1fE+9TMrrTk3FVaUMRCJB3SGObygsx9LYAcKgcd7TztjRXGEqEybWJPvSmXlbSmVMvmNJ0/1eWVUfyqbzCaVdQ482iTeTUi6fu+K/Llg4tyyVMZd8QhFHM2rwmYt43b/mgqJm19iKDENAU8ZMXJy1YM6jPyeiOzCbXJiSCwrAtzXe0c5UPBDgAFAbtadbQogQUzLt0Qk0qojuuIH1iMFxBcja7fu7GO85fBQS9QdO9khfPrkysSf3xiiWnjWvpzKk9E11G0bRZRdC658srh8dzvcgAAoYq7nxp4nP1tUeIDFeQiO5MqEnlXRpQsKFFaU8zhRWgHFSACikhaAuybIuuMLRcNjhmDivLWYJ9zk2kjGLO5hqXv7i4/puzG9KWIiXpviYC9MyJOMWMxQ1V/PJL9deesjlnM1cQStDbuBbVnXvnrairzKTyPcgAAICQ5v7i5QnPrBgaDx4hm4GWYMPKcoNjpuUyheGyLbotCjP3tgBwIBKV46IGPWsRAAiq4uTRrc4BerUPq0g1LJ79/WVLzxzf0plTKcHuC3rLXUHV7clHt5m57pRNd32pXleF6TBb0LDm3vPlFeOqUqk85z3JQAgF3LtfG//EsmFlhi2OzGldhIDjkpNHtwZVAQBZiyxq0FWOBZmYXQA4JEJAwYYWdWubqqsy79BTRreGA85nu92EACXYkVPnjG79w+VLRlelO/cOI7yV0ozF399SEQk40MOEdAcop49r+dMVS8ZUZRSKv75kxeTByWRe6UkGIono7u8Wjn1k0YgjRwbs6QU5eXRr3qG6glvb1IYWNaBgQXbJMb1iTAF+KoVEjtbG3VljzJTJBkXz9TtiW9pCGpeHNRqaEpRIMpZy5czG289dyyn2SkBcSaIBpzlp/MfzUx96f5REMnNkOwFwRPcx5EAJmA6rilhz6lpPG7d78uBkqgcZnqmL6fb9b4598L26ePAIkkEJ5hw+pTZ5xQlbTZtFdPnU4sjCtUFDK8z5HIVZlUUEjeOClaGUSRkFRvDCKc3QNdrvMIIMy2VCkh+cs+bmM9dbLrUF7RkiCEnihr1ka/yax2asbo7GDPsP79bd/My0tMXDe6+NeYlrOOCMqU5nLKXXxoKobv/hndF/endUTLeP9NmPiOSSadtVLimFlElfqg9pvGAntxQGDomgq7i+Wftgkx4OiLTFTxzZProynXfYIaa13TWu31y6fN5x2xM5FXusm0gkBCBm2E8uH3bDU8d15tSQ5gpJygz7rU2V1zw246OmaNywhfwkzKMEBZKe1XHPyMd0++EPRj3w1uio7iAewbCQEsg7bHRlenZdWzrPwwGxuEHfsFPTVZQDCg7P3yPA/KUR7xWP6M5FU5sshx1KWM4oduypcc0Y1tGRUxnFns29KpMal796dcLPFkzkFDXedeS0NwShOaF/+/HpT68YGjMc0jME2XtZTkgSD9qPLh5x3xtjjzQZXhJnueyiqU1elxAiPL04IhEKuMmlMDFHt2fZ2qacNMYcWu5mLTauOv3BxxW705rKDhh5eCFkwlQvnNJ050UfRXQna/FeQUZYc1OWctvzU/7xUW1Ud4CQnqE+IlGYRCSvra/pzKmzRrWrTNo9QpBuMsoM+/Glw3/92oRQwAU4smR4KfSYqoznH4Martoe+N3L8UKFogW2HABAKeRs+th7Uc7QESQccK8+aYuQB8xpGUVX9qxxQa8al5CkTHc27g7/62PHv7O5Mm7YPTep9gwjKIVowPn70uHffeK4lnQgojtuDxfjSlJm2M+uHHrXK+MN1YUjvweJEBCSXn3SlrDmOoJwho+9F83ZtLBHCRbMcnh3PKDg+mZt+sj8qCo7ZfLxNem1uyKbWsO6Inpl9l6NS1fEHResuvS47am8CgjdrzsiIJAyw351fc2t849ty2oHbcdCIEFVbO0IvbGhemRFdnx12naZQEIAKkL28/VD7nhxkqGKozDLnFFM5ZWT61qvPWVzylQihljSoN/9YnlQw8LOeSkkHJ7xyDt0V6dywfSMKwhnOLIi8/KaQb3cCiWYtpQR5dl7Llk5c2RHpxdk9KxxUQyp7oPv1f3ilYmEQIBLcQhVoz3tfcrLawcpTE4clDJUAUCeXTH0rlcmqkxSejT2LSIShcofnb86HnRcSTmD25+q2tahaEqBT5gsMBye8djUog4rd6aPzHfm+MjyrCXYu5srQ1pXExAlmLX5SaPa7v3yykFRs1cRwuv5FpL+dMGkRxePDAdcSuDQu4e8EIQSeKeh6p1NlR9urXjsw+HPf1TrJZNH4dlwbxP27I/Pn9zcmVPLQ+K5JeE/vx2L6rLgs9QLDEd3Frd6h3b21GwoIE2bHTes86Om2NaOYECRAMQRdFAk/5tLVwQ1N2fzfWtcO5P6Lc8e+/amqjLD/gxNZV5CoHHRntMa2kJJUzFUQeBoLGYwiuk8P354x/e/uM60maZge4bd+vdqx6X94eDiwv8XEEFTcHu7cu+L8aAmXUkYxdvOWVtmOLZLGZWmzWeNaosH7ZzFDlTjWtUU/TxVbW9ZTuMyrDmaIiQeDTIIAdulZYZz2zlrvVg7qMl7X4xvby+8Q+kvcACAkBANyvlLI88tDZeHRDrPR1VkbzlzXd5l3tPmTPZcsd63xhXui90AXnPaUVviIoB5l91y5rpRFdl0npeHxHNLw/OXRqJB2U+m8vcLt9IddS7abJw6IVcddRMmn1KbBIR3GyqDmsjklfMmNysMbUG9KJIzvPf18Q+8NSagSK/LF4pK3iSga+ds/uqMbe1ZNaLLLS3qTX+t8Zxsf/lP9h84FAYpk61t0i48LkMJ5G0+a1T7tg5j3a5I2lJ2p7VZo9oiAVdXZVtW++ELxzxXXxvbp8ZVFPKC0AunNP3bGevTeZVTBCA3PFLT2KYaKvafMaX9CA5E0FVsaFFyFv3ilGzOphJgzui2NTtjOzqNhtbQmxurt7SH3thQ/cBbY9bujMQMRxbhueCcYsJUThjR8bMLP3IkE4LEgvLnz1csqA/F+o1D6XdwAIBEMDRc3KBHDDl7bC5lMo3j3HEty7eVtaQDOYcv3xZf3xJxJT2iu12OKBne/qi7L1mpcsw7tDIiHn47+ttX4mX9jIx+B4eXOWgc31xnjKxyjh1hJXI8pIpTx7Z++HF5SzpQHrSVrtpUcZJhKuOqU/dduiIScDM2rwqLV1cHb3uyylCxH24Z7n9wdDV3weurg8cMy48bbCeyPKq7c8a0LtsW395p6IqURUvG+JrUPfNWxA0nbfGKsLtos37jIzUAwGl/3E7eH+EAAEbBFeT11cHpI/N11XZnjpcZzunjW1Y1xxrbg4ZaZD7FizOmDe28d96KMsNJ5XlFyF3eGPjOw4NMh6oc+ues/H4KBwIoHHI2fWNN6PhR+VGVdmeOhTRx5oSWjS3hDS2RoFY0fHCKHVl1dl3bry+pN1SRtlhFSNRvC3z7oUFpk+r9KT0pDjiga/sTZC26oD40aYg9YbCdzLGAIs+csGtnSq/fETNUAf173Gt38/N5xzT/9MJVnGLOZpVh8d5G47qHarIW1VXsz6dQ9l84uvmwHLqgPlRXbU8ZZiVzjDE4a8IuheGiLRWUAmfYP4NTSlBIatrs2lM333zGBldSLzd5ZVXwxkdqHJcGFOzn55P2azg8PjgDIclLK0ND4u70UWbGZK6kc0a31paZ7zZUmg4P8H4XojKvD57h7eetueKEram8IgSpjLrPL43c8lg1EKJy7P9n8vR3OLz4g1MgBF76KBRQcPZY03ZJxuJThyRnDO9Y1RTbkdQNVfSTE2687ZZJUxlRnv31JSvnjG5rz6qcYiwoH1xY9uNnK1WOnEFRnNZUBHB4fFAKCoVXVwc7MuwLE3MKw4SpDC0zvzhpV3tWW7mjTOWSE0QoJCKMoACSNNXTx7f88n/VD42bHVk1qEnO4CfzK+9/JR7SkNDiGHxeNHB0v5SGhos262t2BE4aa1ZF3ESOq1yeOWFXzLCXbC3PObyAVRBGMWNzheH1czfddPoGRiGd5/Gg257h3/trzfPLwvGQRCymUZPFBAd0HbInN+7UXl8TrKt2JtbaWYvlXTZzRMcJIzo2t4Y/bg8FuKRH14RQggAkYarHDe38+cUfnTl+VyqvuJJUht0PG4zrHhq0alsgHhRCFtvScXHBAd68LFUmsuyF5WFKYNaYHCGQMJXamHnOpJ2UwIrtZY5gRy1K5RRzDpdIrj7p4x+cs7YybHXkVF2VoYD86zuxWx+vSpssFJBFR0ZRwgFdjZ/AKbyxNrhhp3ZCnem1gBCAU8a0Hju0c2NLZGtnUOOS0SOY6HoXT5jqhJrUnRd9dPHUHTmbmQ6rCInWNP/Bk1V/eqNMU1FlUIz1/mKFA/bMTjM0XNekvbo6VBNzpw6zhCRJUxlRkTt70k4AWNUUy9nMa0Tt8+qW1/5JCVw5s/E/z10zpMzszKoKxzJDvrIqeOOjNcs+1mNBCUUVZJQIHN0hiK7KlMn+/8pwUyefNiJfGXETWc4pnDpm9wkjOnan9c27wwDQV6e5kj0buHM2n13X/qPzV180tcl2Wc5i8ZDIWfSX/6y464UKy6FF6kr2+mXj48+FIpfXV5fI0WHlzvcvajt7SjaTp6ZDowEHCLyytubB9+oa2kIhzVXY53pgjKIjaMbidRWZb8xuOGviLkBI5hVdlSFNvr4m+Kt/lm/cqcYMCQASi/2+lgQc3YGh6VBXwKUnpr5zVkd1VHRmGSLEDKczpz6xbNhTy4a259SI5lKKh4sIoyglSVm83LDnTd/+lenbygw7kVMIgbKgaEmyB16JP7EowigYqnSL3GCUiFvplcUoDFQOS7for64OBRQ8ZqgVUGUip6hcnlzXesqYVtulG1rCOYcHuCAEDiXd9cZHpS2FAF54TPPt5605a8IuV9KMxSOGYBSe/jDy/cer391ghHXkDASWCBklZTl6vuWWQ02bnDjGvP7sjpmjzZxNshYLqq6uyGXbyx5ZNOL9LRXegCWAA6YS3jiGjMUZxZNGtf3vExunD+00HZq1eVAThoqLN+u/fTm+aJOuq6gpRR9hDAg4YE8vWTpPFYZfOj71jbmJkZVO0qS2SyK6Swl82Bh/dPGIDz6uYAS9ffQ9EfGwyNlcIJk1su3KmY0njOiQCCmTqxyjuvy4VXlwYWz+0ogjSDggJRZNRdyHY88zpoAIyRytiogr5yQum5UqC4lkjgkJEd2VEt7cVPW3D0fUN8UowaDqdv/DrM0lkqm1ictPaPzCmN2UQsrkjELUEJ0Z9vcPIo++E9udYlFDEgJSlur9K2k4PkkxXJK26Lga+xtzE+ccm9FVmcwxRIgaTt5h7zVUPLV82LJtZd3/ZPqwznnHbZtd1xZQRDKnEAJRQ5g2XbAy9ODC2IZdaliTCsfS8yMDDo49XgZNm9oumTo8/39OSZw+ORtQMJFjBCAScBxJF39c/rclwyXCv5ywdebIdoXKVF5BgJgh8g55fXXw4bdj9VsDKkddlfudCePDUdzlEEIgaxFXkOmjzK+dkpw7Matw7LIiumMLikA0JpJml7VwXLJwbfCht6PLtuicYVBDxFIoYPhwfBoimTxBIDNGmZfNSs6dlDVUTJrMix72OBGycE3w7x9El2zRCWAoMLCwGKBwdCMCAFmLSoSpw/KXnZQ885hsWJfeFxeuMf7yTqy+MUApBLUSKXf6cHxGR+MIMmmINW9mSmH41OJI/dbAAHQiPhwHRCRnEVsQAFB8LPaIw4CXRAAEXUWDIAAggpD+XfHh2AcRX3vZVP8W+PLh8OXD4cuHw5cPhy8fDl8+HL58OHz5cPjy4fDlw+HLlw+HLx8OXz4cvnw4fPlw+PLh8OXD4cuHw5cPhy8fDl++fDh8HVT/A+vN2mJlBnJmAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f2f5f9; --surface:#ffffff; --ink:#14213a; --muted:#566178; --line:#d6dde8;
+  --navy:#12284a; --gold:#b88a12; --goldbg:#f6ecc9; --teal:#1f7a6c; --bad:#b3402e; --chip:#e8edf5; --on-navy:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c182b; --surface:#13233d; --ink:#e8eef7; --muted:#9aa9c0; --line:#263858;
+    --navy:#1d3a69; --gold:#e0b53c; --goldbg:#3a3014; --teal:#4cc2ae; --bad:#ff8a73; --chip:#1c2f50;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c182b; --surface:#13233d; --ink:#e8eef7; --muted:#9aa9c0; --line:#263858;
+  --navy:#1d3a69; --gold:#e0b53c; --goldbg:#3a3014; --teal:#4cc2ae; --bad:#ff8a73; --chip:#1c2f50;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 15px/1.45 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;margin:0;line-height:1.15}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header.top{background:var(--navy);color:var(--on-navy);padding:10px 12px;border-bottom:4px solid var(--gold);display:flex;gap:8px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);z-index:6}
+header.top h1{font-size:18px;flex:1;min-width:0}
+header.top img{border-radius:9px;flex:none}
+.ib{border:1px solid rgba(255,255,255,.4);background:transparent;color:var(--on-navy);border-radius:8px;min-width:40px;min-height:40px;font-weight:700;cursor:pointer;position:relative;padding:0 8px;font-size:15px}
+.badge{position:absolute;top:-6px;right:-6px;background:var(--gold);color:#1a1405;border-radius:999px;font-size:11px;font-weight:700;min-width:18px;height:18px;line-height:18px;text-align:center;padding:0 4px}
+main{max-width:720px;margin:0 auto;padding:14px 14px 28px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.grow{flex:1 1 140px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 14px;cursor:pointer;font-weight:600;min-height:42px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;color:var(--ink)}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.btn.small{padding:5px 10px;min-height:34px;font-size:13px}
+.btn.danger{color:var(--bad);border-color:var(--bad)}
+input[type=text],input[type=number],input[type=date],input[type=email],select,textarea{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 10px;min-height:42px}
+textarea{min-height:90px;resize:vertical}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:10px 0 4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.meta{color:var(--muted);font-size:13px}
+.note{background:var(--goldbg);border-left:4px solid var(--gold);padding:9px 12px;border-radius:6px;font-size:13.5px;margin:10px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.stat b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:22px;line-height:1.1}
+.stat span{font-size:13px;color:var(--muted)}
+.out{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:14px}
+.chip{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:600;background:var(--chip);border:1px solid var(--line)}
+.chip.bad{color:var(--bad);border-color:var(--bad);background:transparent}
+.li{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+.check{display:flex;gap:10px;align-items:center}
+.check input{width:22px;height:22px;flex:none}
+.tile{cursor:pointer}
+.tile polygon{fill:var(--surface);stroke:var(--gold);stroke-width:3}
+.tile:hover polygon,.tile:focus polygon{fill:var(--goldbg)}
+.tile.locked{opacity:.6}
+.tile.center polygon{fill:var(--navy);stroke:var(--gold)}
+.tile text{fill:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif}
+.tile.center text{fill:#fff}
+.panel{position:fixed;right:10px;top:calc(62px + env(safe-area-inset-top,0px));width:min(340px,94vw);max-height:70vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;z-index:30;box-shadow:0 8px 28px rgba(0,0,0,.28)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;z-index:40}
+footer{text-align:center;color:var(--muted);font-size:12.5px;padding:6px 14px 22px}
+details{border-bottom:1px solid var(--line);padding:8px 0}
+summary{cursor:pointer;font-weight:600}
+@media (min-width:640px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <button class="ib" id="backBtn" data-go="home" aria-label="Back to the hexagon menu" hidden>&#8592;</button>
+  <img id="logo" width="36" height="36" alt="ReBoRn shield logo">
+  <h1 id="title">ReBoRn Client Tools</h1>
+  <button class="ib" id="bellBtn" aria-label="Open announcements">&#128276;<span class="badge" id="bellCount" hidden>0</span></button>
+  <button class="ib" id="gearBtn" aria-label="Open settings">&#9881;</button>
+</header>
+<div id="bellPanel" class="panel" hidden></div>
+<main id="view" aria-live="polite"></main>
+<footer>Free tools from ReBoRn Marketing Solution Agency. Match. Fund. Grow. Glow.</footer>
+
+<script>
+var EDITION="client";
+var KEY="reborn-tools-"+EDITION;
+var ACCESS={home:"free",margin:"free",seo:"free",tasks:"free",help:"free",set:"free",fund:"client",mail:"client",funnel:"client",clients:"agency",prospects:"agency",gaps:"agency",ads:"agency",pipeline:"agency",backup:"agency"};
+var RANK={free:0,client:1,agency:2};
+function can(v){return RANK[EDITION]>=RANK[ACCESS[v]||"agency"]}
+var S={view:"home",set:{biz:"",cur:"US$",wa:"12687342833",sound:false,theme:"auto"},
+ margin:{price:150,cost:60,fixed:800,jobs:20,target:50},
+ seo:{svc:"",biz:"",loc:"",aud:"",benefit:""},seoOut:null,
+ tasks:[],notifyOn:false,
+ fund:{purpose:"Equipment",amount:"Small (under 5,000)",stage:"Running 1 year or more",reg:"Yes"},fundOut:null,opps:[],
+ contacts:[],mail:{subject:"A quick update from {biz}",body:"Hi {name},\n\n[Write your update or offer here.]\n\nThank you,"},updates:[],
+ logs:[],bell:{items:[],keys:{}},support:{topic:"I need help with a tool",name:"",msg:""},
+ mode:"biz",cover:"",clients:[],activeClient:"",gaps:[],gapIn:{industry:"",market:"Antigua and Barbuda",aud:"",comp:"",pain:"",strength:""},gapOut:null,adIn:{business:"",offer:"",market:"Antigua and Barbuda",platform:"Facebook and Instagram",goal:"Generate leads",budget:"",aud:"",notes:""},adOut:null,camps:[],prospects:[]};
+var TITLES={home:"ReBoRn Tools",margin:"Margin and profit",seo:"SEO subtitle maker",tasks:"Workflow reminders",fund:"Funding finder",mail:"Email and page updates",funnel:"Funnel and wins",help:"Support",set:"Settings"};
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function n0(x){return Math.round(x).toLocaleString("en-US")}
+function num(v){var x=parseFloat(v);return isFinite(x)?x:0}
+function pad(n){return n<10?"0"+n:""+n}
+function today(){var d=new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function C(){return S.set.cur||""}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function toast(t){var d=document.createElement("div");d.className="toast";d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},1900)}
+function copy(t){var ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand("copy")}catch(e){}ta.remove();toast(ok?"Copied":"Select the text and copy it")}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);Object.keys(d).forEach(function(k){if(d[k]&&typeof d[k]==="object"&&!Array.isArray(d[k])&&S[k]&&typeof S[k]==="object"&&!Array.isArray(S[k]))Object.assign(S[k],d[k]);else S[k]=d[k]})}}catch(e){}}
+function save(){try{var o={};Object.keys(S).forEach(function(k){if(k!=="view"&&k!=="bellOpen")o[k]=S[k]});localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+function applyTheme(){var r=document.documentElement;if(S.set.theme==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",S.set.theme)}
+function field(id,label,val,type,extra){return '<label for="'+id+'">'+label+'</label><input id="'+id+'" type="'+(type||"text")+'" value="'+esc(val)+'" '+(extra||"")+'>'}
+function opts(arr,v){return arr.map(function(a){return '<option '+(a===v?"selected":"")+'>'+esc(a)+'</option>'}).join("")}
+function cap(s){return String(s||"").replace(/\w\S*/g,function(w){return w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()})}
+
+/* ---------- Home ---------- */
+function hexPts(cx,cy,r){var p=[];for(var k=0;k<6;k++){var a=Math.PI/180*(60*k-90);p.push((cx+r*Math.cos(a)).toFixed(1)+","+(cy+r*Math.sin(a)).toFixed(1))}return p.join(" ")}
+var TILES=[["margin","%","Margin","Profit calculator",-60],["seo","H2","SEO","Subtitle maker",0],["tasks","\u2713","Workflow","Reminders",60],["fund","$","Funding","Finder",120],["mail","@","Email","Campaigns, updates",180],["help","?","Support","Ask ReBoRn",240]];
+function dueCount(){var t=today();return S.tasks.filter(function(x){return !x.done&&x.due&&x.due<=t}).length}
+function hexMenu(tiles,center,label){
+  var cx=180,cy=190,d=108,svg='<svg viewBox="0 0 360 380" width="100%" style="display:block;max-width:420px;margin:0 auto" role="group" aria-label="'+label+'">';
+  tiles.forEach(function(t){
+    var x=cx+d*Math.cos(t[4]*Math.PI/180),y=cy+d*Math.sin(t[4]*Math.PI/180);
+    var lk=!can(t[0]);svg+='<g class="tile'+(lk?' locked':'')+'" tabindex="0" role="button" aria-label="'+t[2]+', '+t[3]+(lk?', locked, part of the client package':'')+'" data-go="'+t[0]+'"><polygon points="'+hexPts(x,y,58)+'"/><text x="'+x+'" y="'+(y-6)+'" text-anchor="middle" font-size="26" font-weight="700">'+t[1]+'</text><text x="'+x+'" y="'+(y+16)+'" text-anchor="middle" font-size="14" font-weight="600">'+t[2]+'</text><text x="'+x+'" y="'+(y+31)+'" text-anchor="middle" font-size="11" opacity=".8">'+(lk?'\uD83D\uDD12 Client package':t[3])+'</text></g>';
+  });
+  var clk=!can(center[0]);svg+='<g class="tile center'+(clk?' locked':'')+'" tabindex="0" role="button" aria-label="'+center[2]+', '+center[3]+(clk?', locked, part of the client package':'')+'" data-go="'+center[0]+'"><polygon points="'+hexPts(cx,cy,58)+'"/><text x="'+cx+'" y="'+(cy-6)+'" text-anchor="middle" font-size="22" font-weight="700">'+center[1]+'</text><text x="'+cx+'" y="'+(cy+16)+'" text-anchor="middle" font-size="14" font-weight="600">'+center[2]+'</text><text x="'+cx+'" y="'+(cy+31)+'" text-anchor="middle" font-size="11" opacity=".85">'+(clk?'\uD83D\uDD12 Client package':center[3])+'</text></g></svg>';
+  return svg;
+}
+function vHome(){
+  var biz=EDITION!=="agency"||S.mode!=="agency";
+  var seg=EDITION!=="agency"?'':'<div class="row" role="group" aria-label="Choose a toolset" style="margin-bottom:10px"><button class="btn grow '+(biz?"primary":"")+'" data-mode="biz" aria-pressed="'+biz+'">For businesses</button><button class="btn grow '+(!biz?"primary":"")+'" data-mode="agency" aria-pressed="'+!biz+'">For the agency</button></div>';
+  var cover=S.cover?'<img src="'+esc(S.cover)+'" alt="Cover image" style="width:100%;max-height:150px;object-fit:cover;border-radius:12px;margin-bottom:10px">':'';
+  var due=dueCount(),menu,list,note;
+  if(biz){
+    menu=hexMenu(TILES,["funnel","\u25BC","Funnel","Track and celebrate"],"Business tools menu");
+    list=TILES.map(function(t){return '<button class="btn" data-go="'+t[0]+'">'+t[2]+(can(t[0])?'':' (client package)')+'</button>'}).join("")+'<button class="btn gold" data-go="funnel">Funnel'+(can("funnel")?'':' (client package)')+'</button>';
+    note="Free tools to help your business earn more and waste less. Tap a hexagon. Everything you enter stays on this device.";
+  } else {
+    menu=hexMenu(AGTILES,["clients","C","Clients","Workspace"],"Agency tools menu");
+    list=AGTILES.map(function(t){return '<button class="btn" data-go="'+t[0]+'">'+t[2]+'</button>'}).join("")+'<button class="btn gold" data-go="clients">Clients</button>';
+    note="Agency tools for research, prospecting and campaign drafts. Save a client first, then tap Use to load it into the other tools.";
+  }
+  return cover+seg+'<div class="note">'+note+'</div>'+menu+
+  (due?'<p class="meta" style="text-align:center"><b>'+due+'</b> reminder'+(due>1?"s":"")+' due. <a href="#" data-go="tasks">Open workflow</a></p>':'')+
+  '<div class="grid" style="margin-top:8px">'+list+'</div>'+
+  '<p class="meta" style="text-align:center;margin-top:12px">Want ReBoRn to set these up for your business? Open Support.</p>';
+}
+
+/* ---------- Margin ---------- */
+function mOut(){
+  var m=S.margin,gp=m.price-m.cost,gm=m.price>0?gp/m.price:0,mk=m.cost>0?gp/m.cost:0,mg=gp*m.jobs,net=mg-m.fixed,be=gp>0?Math.ceil(m.fixed/gp):null;
+  var tp=m.target<100&&m.target>=0?m.cost/(1-m.target/100):null;
+  var msg=m.price<=0?"Enter a price to see results.":gm*100>=m.target?"Your margin is at or above your target.":"Your margin is below your target of "+m.target+"%. To reach it, charge about "+C()+n0(tp||0)+" or lower the cost per job.";
+  return '<div class="grid"><div class="stat"><b>'+C()+n0(gp)+'</b><span>Profit per job</span></div><div class="stat"><b>'+(gm*100).toFixed(0)+'%</b><span>Margin</span></div><div class="stat"><b>'+(mk*100).toFixed(0)+'%</b><span>Markup on cost</span></div><div class="stat"><b>'+(be==null?"-":be)+'</b><span>Jobs to break even</span></div></div>'+
+  '<div class="card"><div class="two"><div><div class="meta">Monthly gross profit</div><b>'+C()+n0(mg)+'</b></div><div><div class="meta">Monthly profit after fixed costs</div><b style="color:'+(net<0?"var(--bad)":"inherit")+'">'+C()+n0(net)+'</b></div></div><p style="margin:10px 0 0">'+esc(msg)+'</p></div>'+
+  '<p class="meta">A planning estimate. It leaves out tax and any pay for yourself unless you include them in the costs.</p>';
+}
+function vMargin(){var m=S.margin;return '<div class="note">Type your numbers. Results update as you type.</div><div class="two">'+field("m_price","Price per job, "+C(),m.price,"number",'data-m="price" inputmode="decimal" min="0"')+field("m_cost","Direct cost per job, "+C(),m.cost,"number",'data-m="cost" inputmode="decimal" min="0"')+'</div><div class="two">'+field("m_jobs","Jobs per month",m.jobs,"number",'data-m="jobs" inputmode="decimal" min="0"')+field("m_fixed","Fixed costs per month, "+C(),m.fixed,"number",'data-m="fixed" inputmode="decimal" min="0"')+'</div>'+field("m_target","Target margin, %",m.target,"number",'data-m="target" inputmode="decimal" min="0" max="99"')+'<div id="mOut" style="margin-top:12px">'+mOut()+'</div>'}
+
+/* ---------- SEO ---------- */
+function seoGen(){
+  var q=S.seo,svc=(q.svc||"your service").trim(),loc=(q.loc||"your area").trim(),biz=(q.biz||"Your Business").trim(),aud=(q.aud||"homes and businesses").trim(),ben=(q.benefit||"").trim();
+  var Svc=cap(svc),T=[];
+  T.push("PAGE TITLES (H1 ideas)");T.push("1. "+Svc+" in "+cap(loc));T.push("2. Trusted "+svc+" for "+aud+" in "+loc);T.push("3. "+biz+": "+svc+(ben?" that "+ben:" done right"));T.push("");
+  T.push("SUBTITLES (H2 ideas)");
+  ["Our "+svc+" services","Areas we serve around "+loc,"Why customers choose "+biz,"How it works in three simple steps","Prices and how to get a quote","Recent work and customer stories","Questions about "+svc+", answered","Contact "+biz+" today"].forEach(function(x,i){T.push((i+1)+". "+x)});T.push("");
+  T.push("FAQ HEADINGS");
+  ["How much does "+svc+" cost in "+loc+"?","How long does "+svc+" take?","Do you serve "+loc+" and nearby areas?","How do I book or request a quote?","What should I prepare before you arrive?"].forEach(function(x,i){T.push((i+1)+". "+x)});T.push("");
+  var mt=(Svc+" in "+cap(loc)+" | "+biz);if(mt.length>60)mt=mt.slice(0,57)+"...";
+  var md=biz+" offers "+svc+" in "+loc+(ben?" that "+ben:"")+". Call, message on WhatsApp or request a quote today.";if(md.length>155)md=md.slice(0,152)+"...";
+  T.push("META TITLE ("+mt.length+" of 60 characters)");T.push(mt);T.push("");
+  T.push("META DESCRIPTION ("+md.length+" of 155 characters)");T.push(md);T.push("");
+  T.push("IMAGE ALT TEXT IDEAS");T.push("- "+svc+" work by "+biz+" in "+loc);T.push("- Before and after "+svc+" in "+loc);T.push("- The "+biz+" team at work");T.push("");
+  T.push("Tips: keep one H1 per page, use headings that read naturally, and only claim what you can show. No tool can promise a ranking.");
+  return T.join("\n");
+}
+function vSeo(){var q=S.seo;return '<div class="note">Fills proven heading patterns from your answers. It is a template, not an AI service, so adjust the wording to sound like you.</div>'+
+ field("s_svc","Service, for example window cleaning",q.svc,"text",'data-s="svc"')+'<div class="two">'+field("s_biz","Business name",q.biz,"text",'data-s="biz"')+field("s_loc","Town or island",q.loc,"text",'data-s="loc"')+'</div>'+
+ field("s_aud","Who are your customers?",q.aud,"text",'data-s="aud" placeholder="villa owners, hotels, families"')+field("s_ben","One benefit, optional",q.benefit,"text",'data-s="benefit" placeholder="is fast, tidy and fairly priced"')+
+ '<div class="row" style="margin-top:12px"><button class="btn primary grow" data-act="seo">Make my subtitles</button></div>'+
+ (S.seoOut?'<div class="out" style="margin-top:10px">'+esc(S.seoOut)+'</div><div class="row" style="margin-top:8px"><button class="btn" data-act="seoCopy">Copy all</button></div>':'')}
+
+/* ---------- Workflow ---------- */
+var TASKT=[["Follow up on open quotes","weekly"],["Post an update or offer","weekly"],["Ask recent customers for a review","monthly"],["Check margins and prices","monthly"],["Back up customer list","monthly"]];
+function nextDue(d,rep){var x=new Date(d+"T00:00:00");if(rep==="daily")x.setDate(x.getDate()+1);else if(rep==="weekly")x.setDate(x.getDate()+7);else if(rep==="monthly")x.setMonth(x.getMonth()+1);return x.getFullYear()+"-"+pad(x.getMonth()+1)+"-"+pad(x.getDate())}
+function vTasks(){
+  var t=today(),list=S.tasks.slice().sort(function(a,b){return (a.done-b.done)||String(a.due).localeCompare(String(b.due))});
+  var rows=list.length?list.map(function(x){var over=!x.done&&x.due&&x.due<=t;
+    return '<div class="li"><label class="check" style="margin:0;font-size:15px;color:inherit;font-weight:400"><input type="checkbox" data-done="'+x.id+'" '+(x.done?"checked":"")+' aria-label="Mark done"><span style="'+(x.done?"text-decoration:line-through;opacity:.6":"")+'">'+esc(x.title)+'<br><span class="meta">'+(x.due?"Due "+esc(x.due):"No date")+(x.rep&&x.rep!=="none"?", repeats "+x.rep:"")+'</span></span></label><span>'+(over?'<span class="chip bad">Due</span> ':"")+'<button class="btn small" data-deltask="'+x.id+'" aria-label="Delete task">Delete</button></span></div>'}).join(""):'<p class="meta">No reminders yet. Add one, or tap a suggestion.</p>';
+  var supports=("Notification" in window);
+  return '<div class="note">Reminders show here and can pop up as notifications while this page is open. A web page cannot wake your phone when it is closed, so check back daily or add key dates to your phone calendar too.</div>'+
+  field("t_title","Reminder","","text",'placeholder="Call Mr. Smith about the quote"')+'<div class="two">'+field("t_due","Due date",today(),"date")+'<div><label for="t_rep">Repeat</label><select id="t_rep"><option value="none">Does not repeat</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option></select></div></div>'+
+  '<div class="row" style="margin-top:10px"><button class="btn primary grow" data-act="addTask">Add reminder</button></div>'+
+  '<p class="meta" style="margin:12px 0 4px">Quick adds</p><div class="row">'+TASKT.map(function(x,i){return '<button class="btn small" data-tpl="'+i+'">'+esc(x[0])+'</button>'}).join("")+'</div>'+
+  '<div class="card">'+rows+'</div>'+
+  (supports?'<label class="check" style="font-size:14px;color:inherit;font-weight:400"><input type="checkbox" id="notifyOn" '+(S.notifyOn?"checked":"")+'><span>Show notifications for due reminders</span></label>':'<p class="meta">This browser does not support notifications.</p>');
+}
+function checkDue(){
+  if(!S.notifyOn||!("Notification" in window)||Notification.permission!=="granted")return;
+  var t=today(),ch=false;
+  S.tasks.forEach(function(x){if(!x.done&&x.due&&x.due<=t&&x.n!==t){try{new Notification("Reminder",{body:x.title})}catch(e){}x.n=t;ch=true}});
+  if(ch)save();
+}
+
+/* ---------- Funding ---------- */
+function fundGen(){
+  var f=S.fund,out=[],big=f.amount.indexOf("Large")===0,small=f.amount.indexOf("Small")===0,est=f.stage.indexOf("1 year")>-1,idea=f.stage.indexOf("Idea")===0,reg=f.reg==="Yes";
+  out.push("FUNDING TYPES WORTH EXPLORING FOR: "+f.purpose.toUpperCase());out.push("");
+  if(!reg)out.push("First step: register or formalise the business. Most grants, loans and sponsors ask for it.\n");
+  if(idea||!est)out.push("- Customer pre-payments or deposits: ask early customers to pay part up front. It costs nothing and proves demand.");
+  if(small)out.push("- Microloans and community or credit-union loans: usually quicker for small amounts. Compare the total cost, not just the monthly payment.");
+  if(est&&!small)out.push("- Bank or credit-union business loan: lenders look for 12 months or more of income records.");
+  if(f.purpose==="Equipment"||f.purpose==="Vehicle")out.push("- Equipment financing or supplier credit: the item itself often secures the deal. Ask suppliers for payment terms.");
+  if(f.purpose==="Working capital")out.push("- Short-term working capital or a credit line, plus tighter invoicing: shorten the time you wait to be paid.");
+  if(f.purpose==="Marketing")out.push("- Small business support programs and chamber of commerce schemes: some cover marketing or training costs. Check each one.");
+  if(f.purpose==="Community project or event")out.push("- Sponsors and community fundraising: package benefits for sponsors and set a clear goal and date.\n- Grants from foundations, development agencies and government programs: look for ones that match your cause.");
+  else out.push("- Grants and business-support programs from government, regional development bodies and NGOs: free money if you qualify, but check eligibility and deadlines.");
+  if(big&&est)out.push("- Investors or business partners: for larger growth plans. Be ready with a one-page plan and clear numbers.");
+  if(big&&!est)out.push("- Larger amounts are hard for a new business. Consider starting smaller, building a track record, then raising more.");
+  out.push("");out.push("PREPARE THESE FIRST");
+  ["Business registration or ID","Simple 12-month income and cost summary","A quote for what you plan to buy","A one-page plan: what you do, who pays you, how the money will be used","Your contact details and bank details kept private until a trusted provider asks"].forEach(function(x){out.push("- "+x)});
+  out.push("");out.push("Check each provider yourself. This is general information, not financial advice, and no specific program or approval is promised. Never pay an upfront fee to \"unlock\" funding.");
+  return out.join("\n");
+}
+function vFund(){
+  var f=S.fund,rows=S.opps.length?S.opps.map(function(o){return '<div class="li"><div><b>'+esc(o.name)+'</b><div class="meta">'+esc(o.status)+(o.deadline?", deadline "+esc(o.deadline):"")+(o.note?"<br>"+esc(o.note):"")+'</div></div><button class="btn small" data-delopp="'+o.id+'" aria-label="Delete">Delete</button></div>'}).join(""):'<p class="meta">Nothing saved yet.</p>';
+  return '<div class="note">Answer four questions to see the kinds of funding to explore. It does not list or guarantee any specific program. Verify every provider yourself.</div>'+
+  '<label for="f_pur">What is the money for?</label><select id="f_pur" data-f="purpose">'+opts(["Equipment","Vehicle","Working capital","Marketing","Expansion","Community project or event"],f.purpose)+'</select>'+
+  '<div class="two"><div><label for="f_amt">How much?</label><select id="f_amt" data-f="amount">'+opts(["Small (under 5,000)","Medium (5,000 to 25,000)","Large (over 25,000)"],f.amount)+'</select></div><div><label for="f_stg">Stage</label><select id="f_stg" data-f="stage">'+opts(["Idea only","Running under 1 year","Running 1 year or more"],f.stage)+'</select></div></div>'+
+  '<label for="f_reg">Is the business registered?</label><select id="f_reg" data-f="reg">'+opts(["Yes","No"],f.reg)+'</select>'+
+  '<div class="row" style="margin-top:12px"><button class="btn primary grow" data-act="fund">Show my options</button></div>'+
+  (S.fundOut?'<div class="out" style="margin-top:10px">'+esc(S.fundOut)+'</div><div class="row" style="margin-top:8px"><button class="btn" data-act="fundCopy">Copy</button></div>':'')+
+  '<h3 style="margin-top:18px">Opportunity log</h3><div class="two">'+field("o_name","Program or lender","","text")+field("o_dl","Deadline","","date")+'</div>'+
+  '<div class="two"><div><label for="o_st">Status</label><select id="o_st">'+opts(["To check","Eligible","Applied","Waiting","Approved","Not a fit"],"To check")+'</select></div>'+field("o_note","Note or link","","text")+'</div>'+
+  '<div class="row" style="margin-top:8px"><button class="btn" data-act="addOpp">Save to log</button></div><div class="card">'+rows+'</div>';
+}
+
+/* ---------- Email and updates ---------- */
+function merge(s,c){return String(s).replace(/\{name\}/g,(c&&c.name)||"there").replace(/\{biz\}/g,S.set.biz||"our business")}
+function mailto(c){var body=merge(S.mail.body,c)+"\n\nIf you would rather not get these emails, reply STOP and I will remove you.";return "mailto:"+c.email+"?subject="+encodeURIComponent(merge(S.mail.subject,c))+"&body="+encodeURIComponent(body)}
+function snippet(u){return '<div style="border:1px solid #d6dde8;border-radius:10px;padding:14px;margin:12px 0;font-family:sans-serif"><small style="color:#566178">'+esc(u.type)+" | "+esc(u.date)+'</small><h3 style="margin:6px 0">'+esc(u.head)+'</h3><p style="margin:0">'+esc(u.msg)+'</p></div>'}
+function vMail(){
+  var ok=S.contacts.filter(function(c){return c.consent});
+  var cl=S.contacts.length?S.contacts.map(function(c){return '<div class="li"><div><b>'+esc(c.name||"No name")+'</b><div class="meta">'+esc(c.email)+'</div><label class="check" style="margin:2px 0 0;font-size:13px;color:inherit;font-weight:400"><input type="checkbox" data-consent="'+c.id+'" '+(c.consent?"checked":"")+'><span>Agreed to get emails</span></label></div><div class="row">'+(c.consent?'<a class="btn small" href="'+esc(mailto(c))+'">Email</a>':'')+'<button class="btn small" data-delc="'+c.id+'" aria-label="Delete contact">Delete</button></div></div>'}).join(""):'<p class="meta">No contacts yet.</p>';
+  var feed=S.updates.length?S.updates.map(function(u){return '<div class="li"><div><span class="chip">'+esc(u.type)+'</span> <b>'+esc(u.head)+'</b><div class="meta">'+esc(u.date)+'</div><div>'+esc(u.msg)+'</div></div><div class="row"><button class="btn small" data-copyu="'+u.id+'">Copy HTML</button><button class="btn small" data-delu="'+u.id+'" aria-label="Delete update">Delete</button></div></div>'}).join(""):'<p class="meta">No updates yet.</p>';
+  return '<div class="note"><b>Honest note:</b> this page prepares emails and opens them in your email app. It does not send bulk email by itself. For big lists use a service such as Mailchimp or Brevo. Only email people who agreed to hear from you, and always give a way to opt out.</div>'+
+  '<h3>1. Contacts</h3><div class="two">'+field("c_name","Name","","text")+field("c_email","Email","","email",'inputmode="email"')+'</div>'+
+  '<label class="check" style="font-size:14px;color:inherit;font-weight:400"><input type="checkbox" id="c_ok"><span>This person agreed to get emails from me</span></label><div class="row" style="margin-top:8px"><button class="btn" data-act="addC">Add contact</button></div>'+
+  '<label for="c_bulk">Or paste a list, one per line: name,email</label><textarea id="c_bulk" placeholder="Jane Doe,jane@example.com"></textarea><label class="check" style="font-size:14px;color:inherit;font-weight:400"><input type="checkbox" id="c_bulkok"><span>Everyone in this list agreed to get emails</span></label><div class="row" style="margin-top:8px"><button class="btn" data-act="bulk">Import list</button></div><div class="card">'+cl+'</div>'+
+  '<h3>2. Write the email</h3><div class="row"><button class="btn small" data-mt="update">Update</button><button class="btn small" data-mt="offer">Offer</button><button class="btn small" data-mt="thanks">Thank you</button></div>'+
+  field("e_sub","Subject",S.mail.subject,"text",'data-e="subject"')+'<label for="e_body">Message. Use {name} and {biz}.</label><textarea id="e_body" data-e="body" style="min-height:140px">'+esc(S.mail.body)+'</textarea>'+
+  '<div class="row" style="margin-top:8px"><button class="btn gold grow" data-act="bcc">Copy BCC list ('+ok.length+')</button><button class="btn" data-act="copyMail">Copy message</button></div><p class="meta">'+ok.length+' contact'+(ok.length===1?"":"s")+' agreed. Paste the BCC list into the BCC line of your email so addresses stay private. Check your email provider\'s sending limits.</p>'+
+  '<h3 style="margin-top:18px">3. Updates and offers for your web page</h3><div class="two"><div><label for="u_type">Type</label><select id="u_type">'+opts(["Update","Offer","Announcement"],"Update")+'</select></div>'+field("u_head","Headline","","text")+'</div><label for="u_msg">Message</label><textarea id="u_msg"></textarea><div class="row" style="margin-top:8px"><button class="btn" data-act="addU">Add to my feed</button><button class="btn" data-act="copyAllU">Copy HTML for all</button></div><p class="meta">Paste the copied HTML into an Embed block on your website or Google Sites page so visitors see your latest news.</p><div class="card">'+feed+'</div>';
+}
+
+/* ---------- Funnel and wins ---------- */
+function totals(){var t={v:0,l:0,q:0,s:0,r:0};S.logs.forEach(function(x){t.v+=x.v;t.l+=x.l;t.q+=x.q;t.s+=x.s;t.r+=x.r});return t}
+function funnelSvg(t){
+  var st=[["Visitors",t.v,"#1d3a69"],["Leads",t.l,"#2a78d6"],["Quotes",t.q,"#d4a62a"],["Sales",t.s,"#1f7a6c"]],base=t.v>0?t.v:(t.l>0?t.l:0);
+  var h='<svg viewBox="0 0 340 250" width="100%" role="img" aria-label="Hexagon funnel: visitors '+t.v+', leads '+t.l+', quotes '+t.q+', sales '+t.s+'">';
+  st.forEach(function(x,i){
+    var n=base?Math.max(x[1]>0?1:0,Math.round(x[1]/base*10)):0;if(i===0&&t.v===0)n=0;if(i===0&&x[1]>0)n=10;
+    var y=10+i*60;h+='<text x="6" y="'+(y+12)+'" font-size="13" font-weight="600" fill="currentColor">'+x[0]+': '+n0(x[1])+'</text>';
+    for(var j=0;j<n;j++)h+='<polygon points="'+hexPts(20+j*30,y+36,13)+'" fill="'+x[2]+'"/>';
+  });
+  return h+'</svg>';
+}
+function rate(a,b){return b>0?(a/b*100).toFixed(0)+"%":"-"}
+function vFunnel(){
+  var t=totals(),logs=S.logs.slice().reverse().slice(0,6);
+  var rows=logs.length?logs.map(function(x){return '<div class="li"><div><b>'+esc(x.date)+'</b><div class="meta">Visitors '+x.v+', leads '+x.l+', quotes '+x.q+', sales '+x.s+', revenue '+C()+n0(x.r)+'</div></div><button class="btn small" data-dellog="'+x.id+'" aria-label="Delete log">Delete</button></div>'}).join(""):'<p class="meta">No numbers yet. Add this week\'s numbers below.</p>';
+  return '<div class="card" style="color:var(--ink)">'+funnelSvg(t)+'<div class="grid"><div class="stat"><b>'+rate(t.l,t.v)+'</b><span>Visitors to leads</span></div><div class="stat"><b>'+rate(t.q,t.l)+'</b><span>Leads to quotes</span></div><div class="stat"><b>'+rate(t.s,t.q)+'</b><span>Quotes to sales</span></div><div class="stat"><b>'+C()+n0(t.r)+'</b><span>Revenue logged</span></div></div></div>'+
+  '<h3>Add numbers for a week or day</h3><div class="two">'+field("g_date","Date",today(),"date")+field("g_v","Visitors","","number",'inputmode="numeric" min="0"')+'</div><div class="two">'+field("g_l","Leads (enquiries)","","number",'inputmode="numeric" min="0"')+field("g_q","Quotes sent","","number",'inputmode="numeric" min="0"')+'</div><div class="two">'+field("g_s","Sales","","number",'inputmode="numeric" min="0"')+field("g_r","Revenue, "+C(),"","number",'inputmode="decimal" min="0"')+'</div>'+
+  '<div class="row" style="margin-top:10px"><button class="btn primary grow" data-act="addLog">Save numbers</button></div><div class="card">'+rows+'</div>'+
+  '<h3>Announce a win</h3><div class="row"><input id="w_msg" type="text" class="grow" placeholder="Signed a new monthly client" aria-label="Win message" style="flex:1 1 200px"><button class="btn gold" data-act="win">Ring the bell</button></div><p class="meta">The bell (top right) also rings by itself when you hit milestones such as your first lead or first sale. Each one rings once.</p>';
+}
+var MILES=[["l",1,"First lead in your funnel. That is how it starts."],["l",10,"10 leads so far. Your page is working."],["l",25,"25 leads. Check how fast you follow up."],["l",50,"50 leads. Keep the follow-ups going."],["l",100,"100 leads. That is a real pipeline."],["s",1,"First sale from the funnel. Well done."],["s",5,"5 sales from the funnel."],["s",10,"10 sales from the funnel."],["s",25,"25 sales from the funnel."],["v",100,"100 visitors to your page."],["v",500,"500 visitors to your page."],["v",1000,"1,000 visitors to your page."],["r",1,"First revenue logged from the funnel."]];
+function ding(){if(!S.set.sound)return;try{var A=window.AudioContext||window.webkitAudioContext,c=new A(),o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=880;g.gain.value=0.15;o.connect(g);g.connect(c.destination);o.start();o.frequency.setValueAtTime(1175,c.currentTime+0.12);o.stop(c.currentTime+0.35)}catch(e){}}
+function addBell(msg){S.bell.items.unshift({id:uid(),ts:Date.now(),msg:msg,seen:false});S.bell.items=S.bell.items.slice(0,50);ding();toast("Bell: "+msg)}
+function winCheck(){var t=totals();MILES.forEach(function(m){var k=m[0]+m[1];if(t[m[0]]>=m[1]&&!S.bell.keys[k]){S.bell.keys[k]=1;addBell(m[2])}});if(t.l>=20&&t.s/t.l>=0.1&&!S.bell.keys.conv){S.bell.keys.conv=1;addBell("10% or more of your leads are turning into sales.")}}
+function vBell(){var it=S.bell.items;return '<div class="row" style="justify-content:space-between"><b>Announcements</b><button class="btn small" data-act="readAll">Mark all read</button></div>'+(it.length?it.map(function(x){return '<div class="li"><div>'+(x.seen?"":'<span class="chip">New</span> ')+esc(x.msg)+'<div class="meta">'+new Date(x.ts).toLocaleDateString()+'</div></div></div>'}).join(""):'<p class="meta">Nothing yet. Add funnel numbers and the bell rings when you hit a milestone.</p>')}
+
+/* ---------- Support ---------- */
+function waLink(){var s=S.support,t="Hi ReBoRn. Topic: "+s.topic+(s.name?"\nName: "+s.name:"")+(S.set.biz?"\nBusiness: "+S.set.biz:"")+(s.msg?"\nMessage: "+s.msg:"");return "https://wa.me/"+String(S.set.wa).replace(/\D/g,"")+"?text="+encodeURIComponent(t)}
+function vHelp(){var s=S.support;return '<div class="note">Need help, want a tool changed, or want ReBoRn to do the work for you? Send a message.</div>'+
+ '<label for="h_topic">Topic</label><select id="h_topic" data-h="topic">'+opts(["I need help with a tool","I want a free Growth Check","I want ReBoRn to set this up for me","I want to suggest a new tool","Something is not working"],s.topic)+'</select>'+
+ field("h_name","Your name",s.name,"text",'data-h="name"')+'<label for="h_msg">Message</label><textarea id="h_msg" data-h="msg">'+esc(s.msg)+'</textarea>'+
+ '<div class="row" style="margin-top:10px"><a class="btn primary grow" id="waBtn" href="'+esc(waLink())+'" target="_blank" rel="noopener">Send on WhatsApp</a><a class="btn" href="tel:+'+esc(String(S.set.wa).replace(/\D/g,""))+'">Call</a></div>'+
+ '<h3 style="margin-top:18px">Quick answers</h3><details><summary>Where is my data saved?</summary><p>On this device and browser only. If you clear browser data or switch phones, it will not come with you, so copy anything important.</p></details><details><summary>Do these tools send emails or messages for me?</summary><p>No. They prepare content and open your email or WhatsApp app. You stay in control of what is sent.</p></details><details><summary>Can the tools promise more customers?</summary><p>No. They help you plan, price, write and follow up. Results depend on your market, your work and your follow-through.</p></details><details><summary>Can ReBoRn brand this for my business?</summary><p>Yes. Ask for a branded copy with your name, logo and prices.</p></details>';}
+
+/* ---------- Settings ---------- */
+function vSet(){var s=S.set;return '<div class="note">Edition: <b>'+({free:"Free tools",client:"Client package",agency:"Agency system"}[EDITION])+'</b>. These details appear in the tools and messages. They save on this device only.</div>'+
+ field("st_biz","Your business name",s.biz,"text",'data-set="biz"')+'<div class="two">'+field("st_cur","Currency label, for example US$ or J$",s.cur,"text",'data-set="cur"')+field("st_wa","Support WhatsApp number, digits only",s.wa,"text",'data-set="wa" inputmode="numeric"')+'</div>'+
+ '<div class="row" style="margin-top:12px"><button class="btn" data-act="theme">Theme: '+cap(s.theme)+'</button></div>'+
+ '<label class="check" style="font-size:14px;color:inherit;font-weight:400;margin-top:10px"><input type="checkbox" id="st_sound" '+(s.sound?"checked":"")+'><span>Play a bell sound for new announcements</span></label>'+
+ (EDITION==="agency"?'<label for="set_cover">Cover image for the home screen</label><input id="set_cover" type="file" accept="image/*" aria-label="Upload a cover image"><div class="row" style="margin-top:8px"><button class="btn small" data-a2="rmCover">Remove cover</button></div>':'')+
+ '<div class="row" style="margin-top:16px"><button class="btn danger" data-act="clearAll">Clear all saved data</button></div>'}
+
+/* ---------- Shell ---------- */
+
+function vLocked(){
+  var v=S.lockedFor,name=TITLES[v]||"This tool",need=ACCESS[v]==="agency"?"the ReBoRn agency system":"the ReBoRn client package";
+  var msg="Hi ReBoRn. I would like to know about the client package"+(S.set.biz?" for "+S.set.biz:"")+". I tried to open: "+name+".";
+  var href="https://wa.me/"+String(S.set.wa).replace(/\D/g,"")+"?text="+encodeURIComponent(msg);
+  return '<div class="card"><h3>'+esc(name)+' is part of '+need+'</h3>'+
+   (ACCESS[v]==="agency"?'<p>The agency tools are for the ReBoRn team.</p>':'<p>The free tools are the margin calculator, SEO subtitle maker, workflow reminders and support. The client package adds the funding finder, email and page updates, the funnel with the success bell, your own name and logo, setup help and ongoing support from ReBoRn.</p><p class="meta">Ask ReBoRn for pricing and what is included.</p>')+
+   '<div class="row" style="margin-top:10px"><a class="btn gold grow" href="'+esc(href)+'" target="_blank" rel="noopener">Ask ReBoRn about the package</a><button class="btn" data-go="home">Back to tools</button></div></div>';
+}
+TITLES.locked="Part of the client package";TITLES.home={free:"ReBoRn Free Tools",client:"ReBoRn Client Tools",agency:"ReBoRn Tools"}[EDITION];
+var VIEWS={locked:vLocked,home:vHome,margin:vMargin,seo:vSeo,tasks:vTasks,fund:vFund,mail:vMail,funnel:vFunnel,help:vHelp,set:vSet};
+function chrome(){
+  document.getElementById("title").textContent=TITLES[S.view]||TITLES.home;
+  document.getElementById("backBtn").hidden=S.view==="home";
+  var un=S.bell.items.filter(function(x){return !x.seen}).length,b=document.getElementById("bellCount");b.hidden=!un;b.textContent=un;
+  var p=document.getElementById("bellPanel");p.hidden=!S.bellOpen;if(S.bellOpen)p.innerHTML=vBell();
+}
+function render(){document.getElementById("view").innerHTML=VIEWS[S.view]();chrome()}
+function go(v){if(!can(v)){S.lockedFor=v;v="locked"}S.view=v;S.bellOpen=false;render();window.scrollTo(0,0)}
+
+document.addEventListener("click",function(e){
+  var g=e.target.closest("[data-go]");if(g){e.preventDefault();go(g.dataset.go);return}
+  if(e.target.closest("#gearBtn")){go("set");return}
+  if(e.target.closest("#bellBtn")){S.bellOpen=!S.bellOpen;chrome();return}
+  var el=e.target.closest("[data-act],[data-done],[data-deltask],[data-tpl],[data-delopp],[data-consent],[data-delc],[data-mt],[data-copyu],[data-delu],[data-dellog]");
+  if(!el)return;var d=el.dataset;
+  if(d.act){var k=d.act;
+    if(k==="seo"){S.seoOut=seoGen();save();render()}
+    else if(k==="seoCopy")copy(S.seoOut);
+    else if(k==="addTask"){var ti=document.getElementById("t_title").value.trim();if(!ti){toast("Type a reminder first");return}S.tasks.push({id:uid(),title:ti,due:document.getElementById("t_due").value,rep:document.getElementById("t_rep").value,done:false});save();render()}
+    else if(k==="fund"){S.fundOut=fundGen();save();render()}
+    else if(k==="fundCopy")copy(S.fundOut);
+    else if(k==="addOpp"){var n=document.getElementById("o_name").value.trim();if(!n){toast("Add a name first");return}S.opps.push({id:uid(),name:n,deadline:document.getElementById("o_dl").value,status:document.getElementById("o_st").value,note:document.getElementById("o_note").value.trim()});save();render()}
+    else if(k==="addC"){var em=document.getElementById("c_email").value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){toast("Enter a valid email");return}S.contacts.push({id:uid(),name:document.getElementById("c_name").value.trim(),email:em,consent:document.getElementById("c_ok").checked});save();render()}
+    else if(k==="bulk"){var ok=document.getElementById("c_bulkok").checked,n2=0;document.getElementById("c_bulk").value.split("\n").forEach(function(l){var p=l.split(",");var email=(p.length>1?p[p.length-1]:p[0]).trim(),name=p.length>1?p.slice(0,-1).join(",").trim():"";if(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){S.contacts.push({id:uid(),name:name,email:email,consent:ok});n2++}});save();render();toast(n2+" imported")}
+    else if(k==="bcc"){var ls=S.contacts.filter(function(c){return c.consent}).map(function(c){return c.email});if(!ls.length){toast("No contacts have agreed yet");return}copy(ls.join(", "))}
+    else if(k==="copyMail")copy("Subject: "+S.mail.subject+"\n\n"+S.mail.body+"\n\nIf you would rather not get these emails, reply STOP and I will remove you.");
+    else if(k==="addU"){var h=document.getElementById("u_head").value.trim();if(!h){toast("Add a headline");return}S.updates.unshift({id:uid(),type:document.getElementById("u_type").value,head:h,msg:document.getElementById("u_msg").value.trim(),date:today()});save();render()}
+    else if(k==="copyAllU"){if(!S.updates.length){toast("No updates yet");return}copy(S.updates.map(snippet).join("\n"))}
+    else if(k==="addLog"){var gv=function(i){return Math.max(0,num(document.getElementById(i).value))};var x={id:uid(),date:document.getElementById("g_date").value||today(),v:gv("g_v"),l:gv("g_l"),q:gv("g_q"),s:gv("g_s"),r:gv("g_r")};if(!(x.v||x.l||x.q||x.s||x.r)){toast("Enter at least one number");return}S.logs.push(x);winCheck();save();render()}
+    else if(k==="win"){var m=document.getElementById("w_msg").value.trim();if(!m){toast("Type your win first");return}addBell(m);save();render()}
+    else if(k==="readAll"){S.bell.items.forEach(function(x){x.seen=true});save();chrome()}
+    else if(k==="theme"){S.set.theme={auto:"light",light:"dark",dark:"auto"}[S.set.theme]||"auto";applyTheme();save();render()}
+    else if(k==="clearAll"){if(confirm("Clear everything saved by this app on this device?")){try{localStorage.removeItem(KEY)}catch(x2){}location.reload()}}
+    return}
+  if(d.done){var t=S.tasks.find(function(x){return x.id===d.done});if(t){if(el.checked&&t.rep&&t.rep!=="none"){t.due=nextDue(t.due||today(),t.rep);t.done=false;toast("Next reminder: "+t.due)}else t.done=el.checked;save();render()}return}
+  if(d.deltask){S.tasks=S.tasks.filter(function(x){return x.id!==d.deltask});save();render();return}
+  if(d.tpl){var tp=TASKT[+d.tpl];S.tasks.push({id:uid(),title:tp[0],due:nextDue(today(),tp[1]),rep:tp[1],done:false});save();render();return}
+  if(d.delopp){S.opps=S.opps.filter(function(x){return x.id!==d.delopp});save();render();return}
+  if(d.consent){var c=S.contacts.find(function(x){return x.id===d.consent});if(c){c.consent=el.checked;save();render()}return}
+  if(d.delc){S.contacts=S.contacts.filter(function(x){return x.id!==d.delc});save();render();return}
+  if(d.mt){var T={update:["A quick update from {biz}","Hi {name},\n\nHere is what is new at {biz}:\n\n[Add your news]\n\nThank you,"],offer:["A special offer from {biz}","Hi {name},\n\nThis month {biz} is offering:\n\n[Describe the offer and the end date]\n\nReply or message us to book.\n\nThank you,"],thanks:["Thank you from {biz}","Hi {name},\n\nThank you for choosing {biz}. If you were happy with the work, a short review would help us a lot:\n\n[Add review link]\n\nThank you,"]}[d.mt];S.mail.subject=T[0];S.mail.body=T[1];save();render();return}
+  if(d.copyu){var u=S.updates.find(function(x){return x.id===d.copyu});if(u)copy(snippet(u));return}
+  if(d.delu){S.updates=S.updates.filter(function(x){return x.id!==d.delu});save();render();return}
+  if(d.dellog){S.logs=S.logs.filter(function(x){return x.id!==d.dellog});save();render();return}
+});
+document.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches(".tile")){e.preventDefault();go(e.target.dataset.go)}if(e.key==="Escape"&&S.bellOpen){S.bellOpen=false;chrome()}});
+document.addEventListener("input",function(e){
+  var t=e.target,d=t.dataset;
+  if(d.m){S.margin[d.m]=num(t.value);save();document.getElementById("mOut").innerHTML=mOut();return}
+  if(d.s){S.seo[d.s]=t.value;save();return}
+  if(d.f)return;
+  if(d.e){S.mail[d.e]=t.value;save();return}
+  if(d.h){S.support[d.h]=t.value;save();var a=document.getElementById("waBtn");if(a)a.href=waLink();return}
+  if(d.set){S.set[d.set]=t.value;save();return}
+});
+document.addEventListener("change",function(e){
+  var t=e.target,d=t.dataset;
+  if(d.f){S.fund[d.f]=t.value;save();return}
+  if(d.h){S.support[d.h]=t.value;save();var a=document.getElementById("waBtn");if(a)a.href=waLink();return}
+  if(t.id==="notifyOn"){if(t.checked){if(!("Notification" in window))return;Notification.requestPermission().then(function(p){S.notifyOn=p==="granted";if(p!=="granted")toast("Notifications were not allowed");save();render()})}else{S.notifyOn=false;save()}return}
+  if(t.id==="st_sound"){S.set.sound=t.checked;save();if(t.checked)ding();return}
+});
+document.addEventListener("click",function(e){if(S.bellOpen&&!e.target.closest("#bellPanel")&&!e.target.closest("#bellBtn")){S.bellOpen=false;chrome()}},true);
+
+document.getElementById("logo").src=document.querySelector('link[rel="apple-touch-icon"]').href;
+load();applyTheme();render();checkDue();setInterval(checkDue,60000);
+</script>
+</body>
+</html>

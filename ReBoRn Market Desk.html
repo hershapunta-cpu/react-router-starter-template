@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ReBoRn Market Desk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12284a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Market Desk">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f2f5f9; --surface:#ffffff; --ink:#14213a; --muted:#566178; --line:#d6dde8;
+  --navy:#12284a; --gold:#b88a12; --goldbg:#f6ecc9; --up:#17724f; --down:#b3402e; --chip:#e8edf5; --on-navy:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c182b; --surface:#13233d; --ink:#e8eef7; --muted:#9aa9c0; --line:#263858;
+    --navy:#1d3a69; --gold:#e0b53c; --goldbg:#3a3014; --up:#4cc29a; --down:#ff8a73; --chip:#1c2f50;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c182b; --surface:#13233d; --ink:#e8eef7; --muted:#9aa9c0; --line:#263858;
+  --navy:#1d3a69; --gold:#e0b53c; --goldbg:#3a3014; --up:#4cc29a; --down:#ff8a73; --chip:#1c2f50;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 15px/1.45 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;margin:0;line-height:1.15}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header.top{background:var(--navy);color:var(--on-navy);padding:10px 14px;border-bottom:4px solid var(--gold);display:flex;gap:10px;align-items:center}
+header.top h1{font-size:19px;flex:1;min-width:0}
+header.top img{border-radius:9px;flex:none}
+.status{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600}
+main{max-width:760px;margin:0 auto;padding:14px 14px 24px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.grow{flex:1 1 140px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 14px;cursor:pointer;font-weight:600;min-height:42px}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.btn.small{padding:5px 10px;min-height:34px;font-size:13px}
+.btn.danger{color:var(--down);border-color:var(--down)}
+input[type=text],input[type=number],input[type=password],select,textarea{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 10px;min-height:42px}
+textarea{min-height:80px;resize:vertical}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:10px 0 4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.meta{color:var(--muted);font-size:13px}
+.note{background:var(--goldbg);border-left:4px solid var(--gold);padding:9px 12px;border-radius:6px;font-size:13.5px;margin:10px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.out{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:14px}
+.chip{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:600;background:var(--chip);border:1px solid var(--line)}
+.li{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+.sym{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:17px}
+.up{color:var(--up);font-weight:600}.down{color:var(--down);font-weight:600}
+.price{font-variant-numeric:tabular-nums;font-weight:600}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav.tabs button{flex:1;border:0;background:transparent;padding:10px 2px;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;min-height:52px;border-top:3px solid transparent}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-top-color:var(--gold)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(72px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;z-index:20;max-width:92vw;text-align:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <img id="logo" width="36" height="36" alt="ReBoRn shield logo">
+  <h1>ReBoRn Market Desk</h1>
+  <span class="status" id="feedChip">Manual</span>
+</header>
+<main id="view" aria-live="polite"></main>
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button role="tab" data-tab="studio">Make</button>
+  <button role="tab" data-tab="catalog">Catalog</button>
+  <button role="tab" data-tab="watch">Watch</button>
+  <button role="tab" data-tab="alarms">Alarms</button>
+  <button role="tab" data-tab="set">Settings</button>
+</nav>
+<script>
+var KEY="reborn-market-desk-v1";
+var DEFDISC="For education only. Not financial advice. Prices can be delayed or wrong. Investing carries risk, including losing money. Do your own research or speak to a licensed adviser.";
+var STAGES=["Idea","Scripted","Recorded","Edited","Published"];
+var S={tab:"studio",set:{m2:0,feed:"poll",key:"",interval:30,sound:true,notify:false,cat:"What's in the Kittzyz",catCustom:"",disc:DEFDISC,theme:"auto"},
+ watch:[{sym:"AAPL"},{sym:"MSFT"},{sym:"TSLA"}],rules:[],alerts:[],catalog:[],
+ studio:{alertId:"",paste:"",vol:"",prev:"",sym:"",price:"",dp:"",tone:"Educational",len:"30-second short",reason:"",source:"",pos:"I do not hold this stock"},studioOut:"",
+ notes:{}};
+var netBlocked=false,P={},TR=[],ws=null,timer=null,demoTimer=null,ctx=null,feedMsg="Not started";
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function num(v){var x=parseFloat(v);return isFinite(x)?x:0}
+function fmt(x){return x==null||!isFinite(x)?"-":(+x).toFixed(2)}
+function sgn(x){return x==null||!isFinite(x)?"-":(x>=0?"+":"")+(+x).toFixed(2)+"%"}
+function dir(x){return x>=0?"\u25B2":"\u25BC"}
+function toast(t){var d=document.createElement("div");d.className="toast";d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},3200)}
+function copy(t){var ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand("copy")}catch(e){}ta.remove();toast(ok?"Copied":"Select the text and copy it")}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);Object.keys(d).forEach(function(k){if(k==="set")Object.assign(S.set,d.set);else if(k==="studio")Object.assign(S.studio,d.studio);else S[k]=d[k]})}}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({set:S.set,watch:S.watch,rules:S.rules,alerts:S.alerts,catalog:S.catalog,studio:S.studio,studioOut:S.studioOut}))}catch(e){}}
+function applyTheme(){var r=document.documentElement;if(S.set.theme==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",S.set.theme)}
+function catName(){return S.set.cat==="Custom"?(S.set.catCustom||"My catalog"):S.set.cat}
+function opts(arr,v){return arr.map(function(a){return '<option '+(a===v?"selected":"")+'>'+esc(a)+'</option>'}).join("")}
+function field(id,l,v,t,x){return '<label for="'+id+'">'+l+'</label><input id="'+id+'" type="'+(t||"text")+'" value="'+esc(v)+'" '+(x||"")+'>'}
+
+/* ---------- Sound and alarms ---------- */
+function beep(){if(!S.set.sound)return;try{var A=window.AudioContext||window.webkitAudioContext;if(!ctx)ctx=new A();if(ctx.state==="suspended")ctx.resume();var o=ctx.createOscillator(),g=ctx.createGain();o.type="triangle";o.frequency.value=880;g.gain.value=0.2;o.connect(g);g.connect(ctx.destination);var t=ctx.currentTime;o.start(t);o.frequency.setValueAtTime(1175,t+0.15);o.frequency.setValueAtTime(880,t+0.3);o.stop(t+0.5)}catch(e){}}
+function describe(r){return r.type==="above"?"price at or above "+r.val:r.type==="below"?"price at or below "+r.val:r.type==="up"?"up "+r.val+"% or more vs previous close":"down "+r.val+"% or more vs previous close"}
+function fire(r,q){
+  var txt=r.sym+": "+describe(r)+". Now "+fmt(q.p)+" ("+sgn(q.dp)+")";
+  S.alerts.unshift({id:uid(),ts:Date.now(),sym:r.sym,price:q.p,dp:q.dp,text:txt});S.alerts=S.alerts.slice(0,100);
+  beep();toast(txt);
+  if(S.set.notify&&("Notification" in window)&&Notification.permission==="granted"){try{new Notification("Market alarm",{body:txt})}catch(e){}}
+  save();if(S.tab==="alarms")render();
+}
+function evalRules(sym){
+  var q=P[sym];if(!q||q.p==null)return;var now=Date.now();
+  S.rules.forEach(function(r){
+    if(!r.active||r.sym!==sym)return;
+    var hit=r.type==="above"?q.p>=r.val:r.type==="below"?q.p<=r.val:r.type==="up"?q.dp>=r.val:q.dp<=-r.val;
+    if(!hit)return;
+    if(r.rep==="cooldown"&&r.last&&now-r.last<600000)return;
+    r.last=now;if(r.rep==="once")r.active=false;fire(r,q);
+  });
+}
+
+/* ---------- Feeds ---------- */
+function chip(){document.getElementById("feedChip").textContent=({manual:"Manual",demo:"Demo",poll:"Quotes",ws:"Live trades"}[S.set.feed]||"Manual")+": "+feedMsg}
+function setMsg(m){feedMsg=m;chip()}
+function updTable(){var t=document.getElementById("wtable");if(t)t.innerHTML=tableHtml()}
+function setQuote(sym,p,pc,v){
+  var q=P[sym]||{};q.p=p;if(pc!=null&&pc>0)q.pc=pc;if(!q.pc)q.pc=p;q.dp=q.pc>0?(p-q.pc)/q.pc*100:0;q.t=Date.now();if(v!=null)q.v=v;P[sym]=q;
+  evalRules(sym);updTable();
+}
+function stopFeeds(){if(ws){try{ws.onclose=null;ws.close()}catch(e){}ws=null}clearInterval(timer);clearInterval(demoTimer);timer=null;demoTimer=null}
+function startFeed(){
+  stopFeeds();var f=S.set.feed;
+  if(f==="manual"){setMsg("type prices yourself");return}
+  if(f==="demo"){setMsg("simulated");demoTimer=setInterval(function(){S.watch.forEach(function(w){var q=P[w.sym];var base=q?q.p:100;var pc=q?q.pc:100;setQuote(w.sym,Math.max(1,base*(1+(Math.random()-0.5)*0.008)),pc)})},3000);return}
+  if(!S.set.key){setMsg("add your key in Settings");return}
+  if(f==="poll"){setMsg("connecting");pollAll();timer=setInterval(pollAll,Math.max(10,S.set.interval)*1000);return}
+  if(f==="ws"){wsStart()}
+}
+function getQuote(sym){return fetch("https://finnhub.io/api/v1/quote?symbol="+encodeURIComponent(sym)+"&token="+encodeURIComponent(S.set.key)).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})}
+function pollAll(){
+  var i=0,okc=0;
+  (function next(){
+    if(i>=S.watch.length){setMsg(okc?"updated "+new Date().toLocaleTimeString():(netBlocked?"blocked":"no data"));return}
+    var sym=S.watch[i++].sym;
+    getQuote(sym).then(function(d){netBlocked=false;if(d&&d.c){okc++;setQuote(sym,d.c,d.pc,null);if(P[sym])delete P[sym].err}else{var q0=P[sym]||{};q0.err="No data";P[sym]=q0;updTable()}}).catch(function(e){netBlocked=(e&&e.name==="TypeError");setMsg(netBlocked?"blocked":"failed: "+e.message);var b=document.getElementById("blockNote");if(b)b.hidden=!netBlocked}).then(function(){setTimeout(next,350)});
+  })();
+}
+function wsStart(){
+  setMsg("connecting");
+  var n=0;S.watch.forEach(function(w){getQuote(w.sym).then(function(d){if(d&&d.pc){var q=P[w.sym]||{};q.pc=d.pc;if(d.c&&q.p==null){q.p=d.c;q.dp=(d.c-d.pc)/d.pc*100;q.t=Date.now()}P[w.sym]=q;updTable()}}).catch(function(){})});
+  try{ws=new WebSocket("wss://ws.finnhub.io?token="+encodeURIComponent(S.set.key))}catch(e){setMsg("blocked");return}
+  ws.onopen=function(){setMsg("connected");S.watch.forEach(function(w){ws.send(JSON.stringify({type:"subscribe",symbol:w.sym}))})};
+  ws.onmessage=function(ev){try{var m=JSON.parse(ev.data);if(m.type==="trade"&&m.data){m.data.forEach(function(t){TR.unshift({s:t.s,p:t.p,v:t.v,t:t.t});setQuote(t.s,t.p,null,t.v)});TR=TR.slice(0,40);var tr=document.getElementById("trades");if(tr)tr.innerHTML=tradesHtml()}}catch(e){}};
+  ws.onerror=function(){setMsg("connection failed")};
+  ws.onclose=function(){if(S.set.feed==="ws"){setMsg("reconnecting");setTimeout(function(){if(S.set.feed==="ws")wsStart()},5000)}};
+}
+
+/* ---------- Watch ---------- */
+function tableHtml(){
+  if(!S.watch.length)return '<p class="meta">Add a ticker to start.</p>';
+  if(S.set.feed==="manual")return S.watch.map(function(w){var q=P[w.sym]||{};var cls=q.dp>=0?"up":"down";
+    return '<div class="li" style="align-items:flex-end"><div style="flex:0 0 70px"><span class="sym">'+esc(w.sym)+'</span><div class="'+cls+'">'+(q.p!=null?dir(q.dp)+" "+sgn(q.dp):"-")+'</div></div><div class="two" style="flex:1"><div><label for="mp_'+esc(w.sym)+'" style="margin-top:0">Price</label><input id="mp_'+esc(w.sym)+'" type="number" step="any" inputmode="decimal" data-mp="'+esc(w.sym)+'" value="'+(q.p!=null?q.p:"")+'"></div><div><label for="mc_'+esc(w.sym)+'" style="margin-top:0">Prev. close</label><input id="mc_'+esc(w.sym)+'" type="number" step="any" inputmode="decimal" data-mc="'+esc(w.sym)+'" value="'+(q.pc!=null?q.pc:"")+'"></div></div><button class="btn small" data-rm="'+esc(w.sym)+'" aria-label="Remove '+esc(w.sym)+'">Remove</button></div>'}).join("");
+  return S.watch.map(function(w){var q=P[w.sym]||{};var cls=q.dp>=0?"up":"down";
+    return '<div class="li"><div><span class="sym">'+esc(w.sym)+'</span><div class="meta">'+(q.err?esc(q.err)+", check the ticker":(q.t?"Updated "+new Date(q.t).toLocaleTimeString():"No data yet"))+(q.v?", last size "+q.v:"")+'</div></div><div style="text-align:right"><div class="price">'+fmt(q.p)+'</div><div class="'+cls+'">'+(q.p!=null?dir(q.dp)+" "+sgn(q.dp):"-")+'</div></div><button class="btn small" data-rm="'+esc(w.sym)+'" aria-label="Remove '+esc(w.sym)+'">Remove</button></div>'}).join("");
+}
+function tradesHtml(){return TR.length?TR.slice(0,12).map(function(t){return '<div class="li"><span><b>'+esc(t.s)+'</b> '+fmt(t.p)+'</span><span class="meta">size '+esc(t.v)+', '+new Date(t.t).toLocaleTimeString()+'</span></div>'}).join(""):'<p class="meta">Trades appear here in the live-trades mode.</p>'}
+function vWatch(){
+  var demo=S.set.feed==="demo",man=S.set.feed==="manual",live=S.set.feed==="poll"||S.set.feed==="ws";
+  var setup=live&&!S.set.key?'<div class="card"><h3>Connect Finnhub</h3><ol style="margin:8px 0 8px 18px;padding:0"><li>Go to finnhub.io and create a free account.</li><li>Copy your API key from the dashboard.</li><li>Paste it below and tap Save and connect.</li></ol><label for="w_key">Your Finnhub API key</label><input id="w_key" type="password" autocomplete="off" placeholder="Paste your own key"><div class="row" style="margin-top:8px"><button class="btn primary grow" data-act="saveKey">Save and connect</button></div><p class="meta">The key stays in this browser. Never publish a file with your key in it.</p></div>':'';
+  var rpm=S.set.feed==="poll"?Math.round(S.watch.length*60/Math.max(10,S.set.interval)):0;
+  var liveRow=live&&S.set.key?'<div class="row" style="margin-bottom:6px"><button class="btn small" data-act="testKey">Test connection</button><span class="meta">'+(S.set.feed==="poll"?"About "+rpm+" requests a minute. Check your plan's limit. ":"Trades only arrive while the market is trading. ")+'</span></div><div id="testOut" class="meta"></div>':'';
+  var blockNote='<div class="note" id="blockNote" '+(netBlocked?"":"hidden")+'><b>Could not reach Finnhub.</b> If you are using the Claude preview, outside connections are blocked, so open your hosted copy (for example GitHub Pages). Otherwise check your key and connection.</div>';
+  return setup+blockNote+liveRow+(man?'<div class="note"><b>Manual mode:</b> keep your watchlist open in TradingView, then type each price and previous close here. Alarms and the video studio work from what you type. No data key needed.</div>':demo?'<div class="note"><b>Demo mode:</b> prices here are <b>simulated</b> and are not real market data. Switch to a live feed in Settings and add your own data key.</div>':'<div class="note">Prices come from your data provider and can be delayed. Check the provider\'s terms and your plan\'s limits.</div>')+
+  '<div class="row"><input id="w_sym" type="text" placeholder="Ticker, for example NVDA" aria-label="Ticker symbol" style="flex:1 1 150px;text-transform:uppercase"><button class="btn gold" data-act="addW">Add</button>'+(man?'':'<button class="btn" data-act="restart">Refresh feed</button>')+'</div>'+
+  '<div class="card" id="wtable">'+tableHtml()+'</div><h3>Recent trades</h3><div class="card" id="trades">'+tradesHtml()+'</div>';
+}
+
+/* ---------- Alarms ---------- */
+function vAlarms(){
+  var rows=S.rules.length?S.rules.map(function(r){return '<div class="li"><div><span class="sym">'+esc(r.sym)+'</span> <span class="chip">'+(r.active?"On":"Off")+'</span><div class="meta">'+esc(describe(r))+', '+(r.rep==="once"?"fires once":"repeats every 10 minutes at most")+'</div></div><div class="row"><button class="btn small" data-tog="'+r.id+'">'+(r.active?"Turn off":"Turn on")+'</button><button class="btn small" data-delr="'+r.id+'">Delete</button></div></div>'}).join(""):'<p class="meta">No alarms yet.</p>';
+  var al=S.alerts.length?S.alerts.slice(0,15).map(function(a){return '<div class="li"><div><b>'+esc(a.sym)+'</b> '+fmt(a.price)+' <span class="'+(a.dp>=0?"up":"down")+'">'+sgn(a.dp)+'</span><div class="meta">'+new Date(a.ts).toLocaleString()+'</div></div><button class="btn small" data-video="'+a.id+'">Make a video</button></div>'}).join(""):'<p class="meta">Triggered alarms show here with a button to turn each into a video script.</p>';
+  return '<div class="note">Alarms are optional. They only run while this page is open and prices are updating, either from a live feed or from prices you type in Watch. A web page cannot watch the market while it is closed.</div>'+
+  '<div class="two"><div><label for="r_sym">Ticker</label><select id="r_sym">'+S.watch.map(function(w){return '<option>'+esc(w.sym)+'</option>'}).join("")+'</select></div><div><label for="r_type">When</label><select id="r_type"><option value="above">Price at or above</option><option value="below">Price at or below</option><option value="up">Up % vs previous close</option><option value="down">Down % vs previous close</option></select></div></div>'+
+  '<div class="two">'+field("r_val","Value","","number",'inputmode="decimal" step="any" min="0"')+'<div><label for="r_rep">Repeat</label><select id="r_rep"><option value="once">Fire once</option><option value="cooldown">Repeat (10 minute gap)</option></select></div></div>'+
+  '<div class="row" style="margin-top:10px"><button class="btn primary grow" data-act="addR">Add alarm</button><button class="btn" data-act="test">Test the alarm</button></div>'+
+  '<div class="card">'+rows+'</div><h3>Alarm log</h3><div class="card">'+al+'</div>';
+}
+
+/* ---------- Studio ---------- */
+function parsePaste(t){
+  t=String(t||"").trim();if(!t)return null;
+  try{var j=JSON.parse(t);var sy=j.ticker||j.symbol||j.s,pr=(j.price!=null?j.price:(j.close!=null?j.close:j.p));if(sy&&pr!=null)return{sym:String(sy).split(":").pop().toUpperCase(),price:num(pr),dp:j.dp!=null?num(j.dp):null,vol:j.volume||j.vol||""}}catch(e){}
+  var m=t.match(/(?:^|[\s,])(?:[A-Z]+:)?([A-Z][A-Z0-9.\-]{0,9})(?=[\s,]|$)/),nums=t.match(/-?\d+(?:\.\d+)?/g),vol=t.match(/vol(?:ume)?\D{0,3}(\d[\d,.]*)/i);
+  if(!m||!nums)return null;return{sym:m[1],price:num(nums[0]),dp:null,vol:vol?vol[1]:""};
+}
+function pack(){
+  var s=S.studio,sym=(s.sym||"TICKER").toUpperCase(),p=num(s.price),dp=num(s.dp);if(num(s.prev)>0&&p>0)dp=(p-num(s.prev))/num(s.prev)*100;var up=dp>=0,ad=Math.abs(dp).toFixed(1),word=up?"up":"down",mv=up?"rose":"fell";
+  var time=new Date().toLocaleString(),feed=({manual:"prices typed in from a charting platform",demo:"a simulated demo feed",poll:"a delayed or live quote feed",ws:"a live trade feed"})[S.set.feed];
+  var tone=s.tone,beg=tone==="Beginner-friendly";
+  var hook=tone==="Fast news"?sym+" just moved "+word+" "+ad+"%. Quick facts.":beg?"Why does "+sym+" jump or drop in a day? Let's look at today's move.":sym+" "+mv+" "+ad+"% today. Here is what we know, and what we don't.";
+  var reason=(s.reason||"").trim()?"Reported reason, from "+(s.source||"[add source]")+": "+s.reason.trim()+".":"We do not have a confirmed reason yet. Check company news and official filings before drawing conclusions.";
+  var posL=s.pos==="I hold this stock"?"Disclosure: I hold this stock.":s.pos==="I may hold positions"?"Disclosure: I may hold positions in stocks mentioned.":"Disclosure: I do not hold this stock.";
+  var T=[];
+  T.push("VIDEO PACK: "+sym+" ("+s.len+", "+tone+")");T.push("Built "+time+" from "+feed+". Verify every number on a trusted source before publishing.");T.push("");
+  T.push("TITLE OPTIONS");T.push("1. "+sym+" "+word+" "+ad+"%: what we know");T.push("2. Why is "+sym+" moving today?");T.push("3. "+sym+" move explained in "+(s.len==="30-second short"?"30":"60")+" seconds");T.push("");
+  T.push("SCRIPT");
+  T.push("[0-3s] HOOK (on screen: "+sym+" "+dir(dp)+" "+ad+"%)");T.push(hook);
+  T.push("[3-10s] THE NUMBERS");T.push("At the time of recording, "+sym+" was at "+fmt(p)+", "+word+" "+ad+"% against the previous close. Data from "+feed+" and may be delayed."+(s.vol?" Volume reported: "+s.vol+".":""));
+  T.push("[10-22s] WHAT WE KNOW AND DON'T");T.push(reason);
+  if(s.len!=="30-second short"){
+    T.push("[22-35s] HOW TO READ A MOVE");T.push("A percent move compares today's price with the previous close. Look at volume too: a big move on low volume can mean less than it looks.");
+    T.push("[35-48s] THREE QUESTIONS TO ASK");T.push("One, is there verified news or a filing? Two, is the move on unusual volume? Three, does it change anything in your own plan and time frame?");
+    T.push("[48-55s] RISK REMINDER");T.push("Single-day moves can reverse. Never invest money you cannot afford to lose.");
+  } else {
+    T.push("[22-28s] TAKEAWAY");T.push("Big single-day moves can reverse. Check the news, the volume and your own plan before acting.");
+  }
+  T.push("[LAST 3s] CTA + DISCLAIMER");T.push("Follow for more plain-English market explainers. "+posL+" "+S.set.disc);T.push("");
+  T.push("CAPTION");T.push(sym+" "+mv+" "+ad+"% today. What we know, what we don't, and how to read a move. "+S.set.disc);T.push("");
+  T.push("HASHTAGS");T.push("#stocks #stockmarket #investing #marketnews #"+sym.toLowerCase());T.push("");
+  T.push("CHECKLIST BEFORE YOU POST");["Numbers checked on a trusted source and time-stamped","Reason for the move backed by a reliable source, or clearly marked as unknown","No promises, no 'buy now' calls, no hype","Position disclosure included","Music, footage and images are licensed or your own","Disclaimer visible on screen and in the caption"].forEach(function(x){T.push("[ ] "+x)});
+  return T.join("\n");
+}
+function vStudio(){
+  var s=S.studio;
+  var sel='<option value="">Choose a triggered alarm, or type your own</option>'+S.alerts.slice(0,20).map(function(a){return '<option value="'+a.id+'" '+(s.alertId===a.id?"selected":"")+'>'+esc(a.sym)+" "+sgn(a.dp)+" at "+new Date(a.ts).toLocaleTimeString()+'</option>'}).join("");
+  return '<div class="note">Turns a price move into a video script with a hook, numbers, what is known and unknown, a risk reminder and your disclaimer. It is a template, not AI. It will not invent a reason for a move, so add a verified source or leave it as unknown.</div>'+
+  '<label for="st_paste">Paste a TradingView alert or JSON, optional</label><textarea id="st_paste" data-st="paste" placeholder="NASDAQ:AAPL 231.40 vol 1200000">'+esc(s.paste)+'</textarea><div class="row" style="margin-top:6px"><button class="btn small" data-act="readPaste">Read it</button></div><p class="meta">In TradingView, set the alert message to something like {{exchange}}:{{ticker}} {{close}} vol {{volume}}, then paste it here. Check TradingView for which plans allow alerts and webhooks.</p>'+
+  '<label for="st_alert">Or start from an alarm</label><select id="st_alert" data-st="alertId">'+sel+'</select>'+
+  '<div class="two">'+field("st_sym","Ticker",s.sym,"text",'data-st="sym" style="text-transform:uppercase"')+field("st_price","Price now",s.price,"number",'data-st="price" inputmode="decimal" step="any"')+'</div>'+
+  field("st_prev","Previous close, optional (the change is worked out for you)",s.prev,"number",'data-st="prev" inputmode="decimal" step="any"')+field("st_dp","Or type the change vs previous close, %",s.dp,"number",'data-st="dp" inputmode="decimal" step="any"')+
+  '<div class="two"><div><label for="st_tone">Tone</label><select id="st_tone" data-st="tone">'+opts(["Educational","Fast news","Beginner-friendly"],s.tone)+'</select></div><div><label for="st_len">Length</label><select id="st_len" data-st="len">'+opts(["30-second short","60-second explainer"],s.len)+'</select></div></div>'+
+  '<label for="st_reason">Verified reason for the move, optional</label><textarea id="st_reason" data-st="reason" placeholder="Only what a reliable source reports">'+esc(s.reason)+'</textarea>'+
+  field("st_source","Source of that reason",s.source,"text",'data-st="source" placeholder="Company statement, SEC filing, news outlet"')+
+  '<label for="st_pos">Your position</label><select id="st_pos" data-st="pos">'+opts(["I do not hold this stock","I hold this stock","I may hold positions"],s.pos)+'</select>'+
+  '<div class="row" style="margin-top:10px"><button class="btn primary grow" data-act="pack">Build the video pack</button></div>'+
+  (S.studioOut?'<div class="out" style="margin-top:10px">'+esc(S.studioOut)+'</div><div class="row" style="margin-top:8px"><button class="btn" data-act="copyPack">Copy</button><button class="btn gold" data-act="toCat">Save to '+esc(catName())+' catalog</button></div>':'');
+}
+
+/* ---------- Catalog ---------- */
+function prefix(){var w=catName().replace(/[^a-z\s]/gi,"").trim().split(/\s+/).filter(Boolean);if(w.length>1)return w.map(function(x){return x[0]}).join("").toUpperCase().slice(0,4);return (w[0]||"CAT").slice(0,3).toUpperCase()}
+function vCatalog(){
+  var rows=S.catalog.length?S.catalog.map(function(c){return '<div class="card"><div class="row" style="justify-content:space-between"><b>'+esc(c.code)+": "+esc(c.title)+'</b><button class="btn small" data-delc="'+c.id+'">Delete</button></div><div class="meta">'+esc(c.sym)+', '+esc(c.date)+'</div><label for="cs_'+c.id+'">Stage</label><select id="cs_'+c.id+'" data-cstage="'+c.id+'">'+opts(STAGES,c.stage)+'</select><label for="cl_'+c.id+'">Link or note</label><input id="cl_'+c.id+'" type="text" data-clink="'+c.id+'" value="'+esc(c.link)+'" placeholder="Where it is published, or notes"><div class="row" style="margin-top:8px">'+(c.script?'<button class="btn small" data-cscript="'+c.id+'">Copy script</button>':'')+'</div></div>'}).join(""):'<p class="meta">Nothing in the catalog yet. Build a video pack in the Studio and save it here.</p>';
+  return '<div class="note">Your content catalog: <b>'+esc(catName())+'</b>. Change the name in Settings. Track every video from idea to published.</div>'+
+  '<div class="row"><button class="btn" data-act="csvCat">Copy as CSV</button><button class="btn" data-act="htmlCat">Copy as web page list</button></div>'+rows;
+}
+
+/* ---------- Settings ---------- */
+function vSet(){
+  var s=S.set;
+  return '<div class="note">Settings save on this device only. Your data key is stored in this browser. Do not use a shared device, and never publish or send this file with your key inside it.</div>'+
+  '<label for="s_feed">Data feed</label><select id="s_feed" data-set="feed"><option value="poll" '+(s.feed==="poll"?"selected":"")+'>Finnhub quotes (checks every few seconds)</option><option value="ws" '+(s.feed==="ws"?"selected":"")+'>Finnhub live trades (WebSocket)</option><option value="manual" '+(s.feed==="manual"?"selected":"")+'>Manual (type prices yourself)</option><option value="demo" '+(s.feed==="demo"?"selected":"")+'>Demo (simulated prices)</option></select>'+
+  field("s_key","Your Finnhub API key",s.key,"password",'data-set="key" autocomplete="off" placeholder="Paste your own key"')+
+  '<div class="row"><button class="btn small" data-act="testKey">Test my key</button></div><div id="testOut" class="meta"></div><p class="meta">Create a free key at finnhub.io. Plans, delays, symbol limits and redistribution rules change, so read their terms before you rely on the data or show it in videos. This app is not tested against their live service from here.</p>'+
+  field("s_int","Quote check interval, seconds (10 or more)",s.interval,"number",'data-set="interval" min="10"')+
+  '<label for="s_cat">Content catalog name</label><select id="s_cat" data-set="cat">'+opts(["What's in the Kittzyz","Ratta","Custom"],s.cat)+'</select>'+(s.cat==="Custom"?field("s_catc","Custom catalog name",s.catCustom,"text",'data-set="catCustom"'):'')+
+  '<label for="s_disc">Disclaimer added to every script and caption</label><textarea id="s_disc" data-set="disc">'+esc(s.disc)+'</textarea>'+
+  '<label class="row" style="font-size:14px;color:inherit;font-weight:400"><input type="checkbox" id="s_sound" '+(s.sound?"checked":"")+' style="width:22px;height:22px"> Play a sound when an alarm fires</label>'+
+  '<label class="row" style="font-size:14px;color:inherit;font-weight:400"><input type="checkbox" id="s_notify" '+(s.notify?"checked":"")+' style="width:22px;height:22px"> Show notifications (while this page is open)</label>'+
+  '<div class="row" style="margin-top:12px"><button class="btn" data-act="theme">Theme: '+s.theme+'</button><button class="btn danger" data-act="clear">Clear all saved data</button></div>'+
+  '<div class="card"><b>Automating later</b><p class="meta" style="margin:6px 0 0">When you are ready: a TradingView alert can send a webhook to an automation tool such as Make or Zapier, which can add a row to a Google Sheet catalog. That needs paid plans and some setup, and this app cannot receive webhooks by itself. Start with the manual route and automate once the videos prove their worth.</p></div>'+
+  '<div class="note" style="margin-top:14px"><b>Please read:</b> this tool provides data and content templates, not investment advice. Rules for publishing market commentary and for anything that looks like advice or promotion of securities vary by country and platform. For Antigua and Barbuda and the Eastern Caribbean, check the local securities regulator. Never pay for or share non-public information, and do not trade on it.</div>';
+}
+
+/* ---------- Shell ---------- */
+var VIEWS={watch:vWatch,alarms:vAlarms,studio:vStudio,catalog:vCatalog,set:vSet};
+function render(){document.getElementById("view").innerHTML=VIEWS[S.tab]();document.querySelectorAll("nav.tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===S.tab)});chip()}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-tab]");if(t){S.tab=t.dataset.tab;render();window.scrollTo(0,0);return}
+  var d=e.target.closest("[data-act],[data-rm],[data-tog],[data-delr],[data-video],[data-delc],[data-cscript]");if(!d)return;var D=d.dataset,v=function(i){return document.getElementById(i).value};
+  if(D.rm){S.watch=S.watch.filter(function(w){return w.sym!==D.rm});S.rules=S.rules.filter(function(r){return r.sym!==D.rm});delete P[D.rm];save();render();if(S.set.feed==="ws")startFeed();return}
+  if(D.tog){var r=S.rules.find(function(x){return x.id===D.tog});if(r){r.active=!r.active;save();render()}return}
+  if(D.delr){S.rules=S.rules.filter(function(x){return x.id!==D.delr});save();render();return}
+  if(D.video){var a=S.alerts.find(function(x){return x.id===D.video});if(a){S.studio.alertId=a.id;S.studio.sym=a.sym;S.studio.price=fmt(a.price);S.studio.dp=(+a.dp).toFixed(2);S.studioOut="";save();S.tab="studio";render();window.scrollTo(0,0)}return}
+  if(D.delc){S.catalog=S.catalog.filter(function(x){return x.id!==D.delc});save();render();return}
+  if(D.cscript){var c=S.catalog.find(function(x){return x.id===D.cscript});if(c)copy(c.script);return}
+  var k=D.act;
+  if(k==="addW"){var sym=v("w_sym").trim().toUpperCase().replace(/[^A-Z0-9.\-]/g,"");if(!sym){toast("Type a ticker");return}if(S.watch.some(function(w){return w.sym===sym})){toast("Already on the list");return}S.watch.push({sym:sym});save();render();if(S.set.feed==="ws"&&ws&&ws.readyState===1)ws.send(JSON.stringify({type:"subscribe",symbol:sym}));else if(S.set.feed!=="ws")startFeed()}
+  else if(k==="restart"){startFeed();toast("Feed restarted")}
+  else if(k==="saveKey"){var kv=v("w_key").trim();if(!kv){toast("Paste your key first");return}S.set.key=kv;save();render();startFeed();toast("Key saved. Connecting")}
+  else if(k==="testKey"){var out=document.getElementById("testOut");if(out)out.textContent="Testing...";if(!S.set.key){var m0="Add your key first.";if(out)out.textContent=m0;toast(m0);return}getQuote("AAPL").then(function(d){netBlocked=false;var m1=d&&d.c?"Connected. AAPL last price "+fmt(d.c)+". Your key works.":"Connected, but no price came back. The market may be closed or the plan may not include it.";if(out)out.textContent=m1;toast(m1)}).catch(function(e){var m2=e&&e.name==="TypeError"?"The browser blocked the request. In the Claude preview this is expected. Use your hosted copy.":/401|403/.test(String(e.message))?"Finnhub did not accept the key. Check it and try again.":/429/.test(String(e.message))?"Too many requests. Slow the interval or remove tickers.":"Failed: "+e.message;if(out)out.textContent=m2;toast(m2)})}
+  else if(k==="readPaste"){var pr=parsePaste(S.studio.paste);if(!pr){toast("Could not find a ticker and price");return}S.studio.sym=pr.sym;S.studio.price=String(pr.price);if(pr.dp!=null)S.studio.dp=String(pr.dp);S.studio.vol=pr.vol||"";S.studio.alertId="";S.studioOut="";save();render();toast("Filled in "+pr.sym)}
+  else if(k==="htmlCat"){if(!S.catalog.length){toast("Nothing in the catalog yet");return}var esc2=function(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};copy('<h2>'+esc2(catName())+'</h2>\n<ul>\n'+S.catalog.map(function(c){var l=/^https?:\/\//.test(c.link||"")?'<a href="'+esc2(c.link)+'">'+esc2(c.title)+'</a>':esc2(c.title);return '<li>'+esc2(c.code)+': '+l+' ('+esc2(c.date)+', '+esc2(c.stage)+')</li>'}).join("\n")+'\n</ul>\n<p><small>'+esc2(S.set.disc)+'</small></p>')}
+  else if(k==="addR"){var val=num(v("r_val"));if(!(val>0)){toast("Enter a value above 0");return}S.rules.push({id:uid(),sym:v("r_sym"),type:v("r_type"),val:val,rep:v("r_rep"),active:true,last:0});save();render()}
+  else if(k==="test"){beep();toast("Test alarm: this is what an alert looks like")}
+  else if(k==="pack"){if(!S.studio.sym||!S.studio.price){toast("Add a ticker and price");return}S.studioOut=pack();save();render()}
+  else if(k==="copyPack")copy(S.studioOut);
+  else if(k==="toCat"){var n=S.catalog.filter(function(x){return x.code.indexOf(prefix())===0}).length+1,code=prefix()+"-"+String(n).padStart(3,"0");S.catalog.unshift({id:uid(),code:code,sym:S.studio.sym.toUpperCase(),title:S.studio.sym.toUpperCase()+" move, "+S.studio.len,date:new Date().toLocaleDateString(),stage:"Scripted",link:"",script:S.studioOut});save();toast("Saved as "+code);S.tab="catalog";render()}
+  else if(k==="csvCat"){var q=function(x){return '"'+String(x==null?"":x).replace(/"/g,'""')+'"'};copy(["Code,Ticker,Title,Date,Stage,Link or note"].concat(S.catalog.map(function(c){return [c.code,c.sym,c.title,c.date,c.stage,c.link].map(q).join(",")})).join("\n"))}
+  else if(k==="theme"){S.set.theme={auto:"light",light:"dark",dark:"auto"}[S.set.theme]||"auto";applyTheme();save();render()}
+  else if(k==="clear"){if(confirm("Clear everything saved by this app on this device?")){try{localStorage.removeItem(KEY)}catch(x){}location.reload()}}
+});
+document.addEventListener("input",function(e){
+  var t=e.target,D=t.dataset;
+  if(D.st){S.studio[D.st]=t.value;save();return}
+  if(D.clink){var c=S.catalog.find(function(x){return x.id===D.clink});if(c){c.link=t.value;save()}return}
+  if(D.set&&D.set!=="feed"&&D.set!=="cat"){S.set[D.set]=D.set==="interval"?num(t.value):t.value;save()}
+});
+document.addEventListener("change",function(e){
+  var t=e.target,D=t.dataset;
+  if(D.st==="alertId"){var a=S.alerts.find(function(x){return x.id===t.value});S.studio.alertId=t.value;if(a){S.studio.sym=a.sym;S.studio.price=fmt(a.price);S.studio.dp=(+a.dp).toFixed(2)}save();render();return}
+  if(D.st){S.studio[D.st]=t.value;save();return}
+  if(D.mp||D.mc){var sy=D.mp||D.mc,q=P[sy]||{};var pv=D.mp?num(t.value):(q.p!=null?q.p:null),pcv=D.mc?num(t.value):(q.pc!=null?q.pc:null);if(D.mp&&!(pv>0))return;if(pv==null){q.pc=pcv;P[sy]=q;updTable();return}setQuote(sy,pv,pcv>0?pcv:null);return}
+  if(D.cstage){var c=S.catalog.find(function(x){return x.id===D.cstage});if(c){c.stage=t.value;save()}return}
+  if(D.set==="feed"){S.set.feed=t.value;save();startFeed();render();return}
+  if(D.set==="cat"){S.set.cat=t.value;save();render();return}
+  if(t.id==="s_sound"){S.set.sound=t.checked;save();if(t.checked)beep();return}
+  if(t.id==="s_notify"){if(t.checked){if(!("Notification" in window)){t.checked=false;toast("Notifications are not supported here");return}Notification.requestPermission().then(function(p){S.set.notify=p==="granted";if(p!=="granted")toast("Notifications were not allowed");save();render()})}else{S.set.notify=false;save()}return}
+});
+document.getElementById("logo").src=document.querySelector('link[rel="apple-touch-icon"]').href;
+load();if(!S.set.m2){if(S.set.feed==="manual"||S.set.feed==="demo")S.set.feed="poll";S.set.m2=1;save()}applyTheme();render();startFeed();
+</script>
+</body>
+</html>
